@@ -1,0 +1,71 @@
+$main-color: #0f94b8;
+$second-color: #27333a;
+$main-text-color: #30495d;
+$second-text-color: #79809a;
+$lower-contrast: #f5f6fb;
+
+.eachSlide {
+  width: 100%;
+  border-radius: 10px;
+  cursor: grab;
+
+  .slide {
+    display: flex;
+    .image {
+      border-radius: 5px;
+      overflow: hidden;
+      margin-right: 40px;
+      width: 500px;
+      height: 400px;
+      background-size: cover;
+      @media (min-width: 1300px) {
+        width: 700px;
+      }
+    }
+    .description {
+      width: 50%;
+      .date {
+        color: $second-text-color;
+        font-weight: 900;
+        margin-bottom: 30px;
+      }
+      .title {
+        margin-top: 5px;
+        margin-bottom: 10px;
+        color: $main-text-color;
+      }
+      p {
+        line-height: 25px;
+      }
+
+      .magazineLinks {
+        margin-top: 35px;
+        display: flex;
+        flex-wrap: wrap;
+        .link1 {
+          border: 2px solid #0f94b8;
+          border-radius: 5px;
+          padding: 10px 20px;
+          margin-right: 20px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          margin-top: 10px;
+          &:hover {
+            background-color: #0f94b8;
+            color: white;
+          }
+        }
+        .link2 {
+          border: 2px solid #27333a;
+          background-color: #30495d;
+          color: white;
+          border-radius: 5px;
+          padding: 10px 20px;
+          margin-right: 20px;
+          cursor: pointer;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
