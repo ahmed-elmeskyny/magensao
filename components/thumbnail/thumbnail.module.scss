@@ -1,0 +1,32 @@
+$main-color: #0f94b8;
+$second-color: #27333a;
+$main-text-color: #30495d;
+$second-text-color: #79809a;
+$lower-contrast: #f5f6fb;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 10px;
+  padding: 5px;
+  cursor: pointer;
+  img {
+    width: 300px;
+
+    border-radius: 5px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 15px;
+    font-weight: 600;
+    color: #79809a;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    span {
+      color: #0f94b8;
+    }
+  }
+}

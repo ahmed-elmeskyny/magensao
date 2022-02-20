@@ -1,0 +1,73 @@
+$main-color: #0f94b8;
+$second-color: #27333a;
+$main-text-color: #30495d;
+$second-text-color: #79809a;
+$lower-contrast: #f5f6fb;
+
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+  overflow: hidden;
+}
+
+.magContainer {
+  display: flex;
+  flex-wrap: wrap;
+  @media (max-width: 900px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+  }
+  a {
+    display: flex;
+    margin-right: 15px;
+    .links {
+      display: flex;
+      flex-direction: column;
+      color: #0c97b4;
+      margin-bottom: 10px;
+      a {
+        text-decoration: underline;
+        padding: 1px;
+      }
+      .text {
+        font-family: "Ubuntu", sans-serif;
+
+        margin-top: 15px;
+        h4 {
+          color: #30495d;
+          font-weight: 900;
+        }
+        p {
+          font-size: 13px;
+          font-weight: 600;
+          color: #79809a;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+
+  .mag {
+    margin: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    display: flex;
+    margin-right: 20px;
+    &:hover {
+      transform: scale(1.03);
+    }
+    .thumbnail {
+      width: 180px;
+      height: 250px;
+      background-size: cover;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+$main-color: #0f94b8;
+$second-color: #27333a;
+$main-text-color: #30495d;
+$second-text-color: #79809a;
+$lower-contrast: #f5f6fb;
+
+.articleContainer {
+  margin-right: 25px;
+  h1 {
+    font-weight: 600;
+    color: #30495d;
+    margin-bottom: 10px;
+    font-size: 50px;
+  }
+  .writer {
+    color: #79809a;
+    font-weight: 300;
+    margin-bottom: 10px;
+  }
+
+  img {
+    width: 400px;
+    border-radius: 5px;
+    float: left;
+    margin-right: 15px;
+  }
+
+  p {
+    text-align: justify;
+    font-weight: 600;
+    color: #79809a;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
+}

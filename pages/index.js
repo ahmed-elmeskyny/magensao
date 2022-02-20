@@ -5,6 +5,7 @@ import styles from "../styles/Home.module.scss";
 //components
 import Layout from "../components/Layout/layout";
 import Slider from "../components/slideshow/slider";
+import Thumbnail from "../components/thumbnail/thumbnail";
 
 export default function Home() {
   return (
@@ -19,6 +20,8 @@ export default function Home() {
       </div>
       <Layout>
         <Slider></Slider>
+        <Thumbnail></Thumbnail>
+        <Thumbnail></Thumbnail>
       </Layout>
     </div>
   );

@@ -4,6 +4,11 @@ $main-text-color: #30495d;
 $second-text-color: #79809a;
 $lower-contrast: #f5f6fb;
 
+.slides {
+  @media (max-width: 800px) {
+    display: none;
+  }
+}
 .eachSlide {
   width: 100%;
   border-radius: 10px;
@@ -11,6 +16,7 @@ $lower-contrast: #f5f6fb;
 
   .slide {
     display: flex;
+
     .image {
       border-radius: 5px;
       overflow: hidden;

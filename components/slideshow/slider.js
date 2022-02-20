@@ -5,6 +5,8 @@ import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import styles from "./slider.module.scss";
 
+import { articles } from "../../db/articles";
+
 const properties = {
   indicators: true,
   arrows: false,
@@ -14,7 +16,7 @@ const properties = {
 const Slider = () => {
   return (
     <div>
-      <Slide easing="ease" {...properties} style={{ display: "none" }}>
+      <Slide easing="ease" {...properties} className={styles.slides}>
         <div className={styles.eachSlide}>
           <div className={styles.slide}>
             <div className={styles.image} style={{ width: "280px" }}>
@@ -62,7 +64,9 @@ const Slider = () => {
                 Ipsum as their default model text, and a search for 'lorem...
               </p>
               <div className={styles.magazineLinks}>
-                <a className={styles.link1}>LIRE L'ARTICLE </a>
+                <a className={styles.link1} href="/article/1">
+                  LIRE L'ARTICLE{" "}
+                </a>
                 <a className={styles.link2}>TOUS LES ARTICLES LIÉS</a>
               </div>
             </div>
