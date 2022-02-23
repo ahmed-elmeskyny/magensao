@@ -10,13 +10,7 @@ import { RiFacebookBoxFill, RiInstagramFill } from "react-icons/ri";
 
 const Share = () => {
   return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "flex-start",
-        width: "75%",
-      }}
-    >
+    <div className={styles.mobile}>
       <StickyBox offsetTop={20} offsetBottom={20}>
         <div className={styles.shareContainer}>
           <h2>Inscrivez-vous à notre news-lettre</h2>

@@ -6,11 +6,19 @@ $lower-contrast: #f5f6fb;
 
 .articleContainer {
   margin-right: 25px;
+  @media (max-width: 800px) {
+    margin: 0;
+    margin-top: 120px;
+    padding: 10px;
+  }
   h1 {
     font-weight: 600;
     color: #30495d;
     margin-bottom: 10px;
     font-size: 50px;
+    @media (max-width: 800px) {
+      font-size: 35px;
+    }
   }
   .writer {
     color: #79809a;
@@ -23,6 +31,10 @@ $lower-contrast: #f5f6fb;
     border-radius: 5px;
     float: left;
     margin-right: 15px;
+
+    @media (max-width: 800px) {
+      width: 100%;
+    }
   }
 
   p {
@@ -31,5 +43,15 @@ $lower-contrast: #f5f6fb;
     color: #79809a;
     line-height: 30px;
     margin-bottom: 30px;
+  }
+}
+
+.mobile {
+  display: flex;
+  align-items: flex-start;
+  width: 75%;
+
+  @media (max-width: 800px) {
+    display: none;
   }
 }

@@ -12,7 +12,10 @@ $lower-contrast: #f5f6fb;
   border-radius: 3px;
   border-top: #0f94b8 3px solid;
   padding-top: 20px;
-  width: 300px;
+  width: 250px;
+  @media (max-width: 800px) {
+    display: none;
+  }
   h2 {
     color: #30495d;
   }

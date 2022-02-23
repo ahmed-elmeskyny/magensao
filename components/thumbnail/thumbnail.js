@@ -1,16 +1,14 @@
 //styles
 import styles from "./thumbnail.module.scss";
 
-const Thumbnail = () => {
+const Thumbnail = ({ img, categorie, date, titre }) => {
   return (
     <div className={styles.container}>
-      <img src="/machine.jpg"></img>
+      <img src={`${img}`}></img>
       <p className={styles.date}>
-        Nov 03 , 2021 - <span>Ingénierie</span>
+        {date} - <span>{categorie}</span>
       </p>
-      <h2 className={styles.titre}>
-        Machine Learning – Définition, fonctionnement et secteurs d’application
-      </h2>
+      <h2 className={styles.titre}>{titre}</h2>
     </div>
   );
 };

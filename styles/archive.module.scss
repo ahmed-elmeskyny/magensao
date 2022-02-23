@@ -31,9 +31,17 @@ $lower-contrast: #f5f6fb;
       flex-direction: column;
       color: #0c97b4;
       margin-bottom: 10px;
+      @media (max-width: 800px) {
+        width: 40%;
+      }
       a {
         text-decoration: underline;
         padding: 1px;
+        img {
+          @media (max-width: 800px) {
+            display: none;
+          }
+        }
       }
       .text {
         font-family: "Ubuntu", sans-serif;
