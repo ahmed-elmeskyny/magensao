@@ -1,0 +1,30 @@
+$main-color: #0f94b8;
+$second-color: #27333a;
+$main-text-color: #30495d;
+$second-text-color: #79809a;
+$lower-contrast: #f5f6fb;
+
+.pageContainer {
+  width: 75%;
+  margin-right: 20px;
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #30495d;
+    margin-bottom: 10px;
+    input {
+      padding: 5px;
+      border-radius: 5px;
+      border: 2px solid #0f94b8;
+      outline: none;
+      width: 200px;
+      margin-right: 28px;
+    }
+  }
+  .articles {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}

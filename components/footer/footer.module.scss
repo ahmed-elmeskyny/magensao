@@ -31,10 +31,10 @@ $lower-contrast: #f5f6fb;
       justify-content: center;
       list-style: none;
       font-size: 20px;
-      margin-bottom: 10px;
       .icon {
         color: $second-text-color;
-        margin: 20px 15px;
+        margin: 10px 15px;
+        cursor: pointer;
 
         &:hover {
           color: $main-color;
@@ -86,7 +86,7 @@ $lower-contrast: #f5f6fb;
   }
 
   .menu {
-    margin-top: 20px;
+    margin-top: 10px;
     padding-bottom: 15px;
     margin-bottom: 20px;
     text-align: center;

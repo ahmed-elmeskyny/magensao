@@ -23,8 +23,8 @@ $lower-contrast: #f5f6fb;
     align-items: center;
     @media (max-width: 800px) {
       width: 100%;
+
       margin-bottom: 10px;
-      border: none;
     }
     .title {
       text-align: center;
@@ -45,9 +45,20 @@ $lower-contrast: #f5f6fb;
     @media (max-width: 800px) {
       width: 100%;
       margin: 5px;
+      margin-top: 35px;
       padding: 5px;
       margin-bottom: 30px;
-      border: none;
+      border-bottom: none;
+    }
+    .essentiel {
+      color: #30495d;
+      font-weight: 600;
+      background-color: white;
+      margin-top: -16px;
+      width: 150px;
+      @media (max-width: 800px) {
+        margin-top: -20px;
+      }
     }
     .news {
       margin-top: 10px;

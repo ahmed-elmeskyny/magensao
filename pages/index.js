@@ -57,6 +57,7 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.newsContainer}>
+            <h2 className={styles.essentiel}>L’ESSENTIEL</h2>
             <div className={styles.news}>
               <p>
                 Culture - <span>Fév 03 , 2022</span>

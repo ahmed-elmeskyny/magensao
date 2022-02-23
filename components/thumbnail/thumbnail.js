@@ -3,13 +3,15 @@ import styles from "./thumbnail.module.scss";
 
 const Thumbnail = ({ img, categorie, date, titre }) => {
   return (
-    <div className={styles.container}>
+    <a className={styles.container} href="/article/1">
       <img src={`${img}`}></img>
-      <p className={styles.date}>
-        {date} - <span>{categorie}</span>
-      </p>
-      <h2 className={styles.titre}>{titre}</h2>
-    </div>
+      <div>
+        <p className={styles.date}>
+          {date} - <span>{categorie}</span>
+        </p>
+        <h2 className={styles.titre}>{titre}</h2>
+      </div>
+    </a>
   );
 };
 

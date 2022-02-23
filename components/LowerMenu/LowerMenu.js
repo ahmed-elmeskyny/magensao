@@ -15,42 +15,42 @@ export default function LowerMenu() {
           </ActiveLink>
         </li>
         <li>
-          <ActiveLink href="#" activeClassName={styles.activeLink}>
+          <ActiveLink href="/corona" activeClassName={styles.activeLink}>
             <a href="#">Coronavirus</a>
           </ActiveLink>
         </li>
         <li>
-          <ActiveLink href="#" activeClassName={styles.activeLink}>
+          <ActiveLink href="/politique" activeClassName={styles.activeLink}>
             <a href="#">Politique</a>
           </ActiveLink>
         </li>
         <li>
-          <ActiveLink href="#" activeClassName={styles.activeLink}>
+          <ActiveLink href="/sport" activeClassName={styles.activeLink}>
             <a href="#">Sport</a>
           </ActiveLink>
         </li>
         <li>
-          <ActiveLink href="#" activeClassName={styles.activeLink}>
+          <ActiveLink href="/ensao" activeClassName={styles.activeLink}>
             <a href="#">Ensao</a>
           </ActiveLink>
         </li>
         <li>
-          <ActiveLink href="#" activeClassName={styles.activeLink}>
+          <ActiveLink href="/economie" activeClassName={styles.activeLink}>
             <a href="#">Économie</a>
           </ActiveLink>
         </li>
         <li>
-          <ActiveLink href="#" activeClassName={styles.activeLink}>
+          <ActiveLink href="ingenierie" activeClassName={styles.activeLink}>
             <a href="#">Ingénierie</a>
           </ActiveLink>
         </li>
         <li>
-          <ActiveLink href="#" activeClassName={styles.activeLink}>
+          <ActiveLink href="/culture" activeClassName={styles.activeLink}>
             <a href="#">Culture</a>
           </ActiveLink>
         </li>
         <li>
-          <ActiveLink href="#" activeClassName={styles.activeLink}>
+          <ActiveLink href="/societe" activeClassName={styles.activeLink}>
             <a href="#">Société</a>
           </ActiveLink>
         </li>

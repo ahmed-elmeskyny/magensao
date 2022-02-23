@@ -36,8 +36,15 @@ const Slider = () => {
                 ipsum' will uncover many web sites still in their infancy...
               </p>
               <div className={styles.magazineLinks}>
-                <a className={styles.link1}>LIRE CETTE ÉDITION </a>
-                <a className={styles.link2}>VOIR TOUS LES NUMÉROS</a>
+                <a
+                  className={styles.link1}
+                  href="https://tinyurl.com/magensao-7-read"
+                >
+                  LIRE CETTE ÉDITION{" "}
+                </a>
+                <a className={styles.link2} href="/archives">
+                  VOIR TOUS LES NUMÉROS
+                </a>
               </div>
             </div>
           </div>
