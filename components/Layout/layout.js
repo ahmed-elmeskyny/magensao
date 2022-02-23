@@ -4,6 +4,7 @@ import styles from "./layout.module.scss";
 //components
 import UpperMenu from "../UpperMenu/UpperMenu";
 import LowerMenu from "../LowerMenu/LowerMenu";
+import Footer from "../footer/footer";
 
 export default function Layout(props) {
   return (
@@ -11,6 +12,7 @@ export default function Layout(props) {
       <UpperMenu></UpperMenu>
       <LowerMenu></LowerMenu>
       {props.children}
+      <Footer></Footer>
     </div>
   );
 }

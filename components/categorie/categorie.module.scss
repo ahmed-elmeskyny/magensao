@@ -1,0 +1,36 @@
+$main-color: #0f94b8;
+$second-color: #27333a;
+$main-text-color: #30495d;
+$second-text-color: #79809a;
+$lower-contrast: #f5f6fb;
+
+.categorieContainer {
+  .categorie {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px #30495d solid;
+    padding-bottom: 10px;
+    h2 {
+      color: #0f94b8;
+      font-weight: 600;
+    }
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      color: #79809a;
+      font-size: 14px;
+      cursor: pointer;
+      &:hover {
+        color: #30495d;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .blogs {
+    display: flex;
+    width: 100%;
+    height: 300px;
+  }
+}

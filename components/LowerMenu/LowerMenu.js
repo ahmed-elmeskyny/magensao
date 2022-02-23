@@ -11,7 +11,7 @@ export default function LowerMenu() {
       <ul>
         <li>
           <ActiveLink href="/" activeClassName={styles.activeLink}>
-            <a>Acceuil</a>
+            <a>Accueil</a>
           </ActiveLink>
         </li>
         <li>

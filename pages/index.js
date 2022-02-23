@@ -6,6 +6,8 @@ import styles from "../styles/Home.module.scss";
 import Layout from "../components/Layout/layout";
 import Slider from "../components/slideshow/slider";
 import Thumbnail from "../components/thumbnail/thumbnail";
+import Abonner from "../components/abonner/abonner";
+import Categorie from "../components/categorie/categorie";
 
 export default function Home() {
   return (
@@ -102,6 +104,10 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        <Abonner></Abonner>
+        <Categorie categorie="Ingénierie"></Categorie>
+        <Categorie categorie="Culture"></Categorie>
       </Layout>
     </div>
   );
