@@ -109,6 +109,8 @@ export default function Home() {
         <Abonner></Abonner>
         <Categorie categorie="Ingénierie"></Categorie>
         <Categorie categorie="Culture"></Categorie>
+        <Categorie categorie="Ingénierie"></Categorie>
+        <Categorie categorie="Culture"></Categorie>
       </Layout>
     </div>
   );

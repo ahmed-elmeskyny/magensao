@@ -1,4 +1,5 @@
 import Head from "next/head";
+import {} from "react"
 
 import styles from "../styles/categories.module.scss";
 

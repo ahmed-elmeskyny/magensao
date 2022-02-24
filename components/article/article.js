@@ -10,7 +10,7 @@ const Article = () => {
         {" "}
         Variant Omicron BA.2: les chercheurs percent ses premiers secrets
       </h1>
-      <p className={styles.writer}>Par Jhon Cina, 2 Janv 2022 </p>
+      <p className={styles.writer}>Par Quelqu'un, 2 Janv 2022 </p>
       <img src="/corona.jpg"></img>
       <p className={styles.article}>
         Contrary to popular belief, Lorem Ipsum is not simply random text. It

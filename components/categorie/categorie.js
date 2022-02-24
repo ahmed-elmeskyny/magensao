@@ -37,7 +37,7 @@ const Categorie = ({ categorie }) => {
           date="Nov 03, 2021"
         ></Thumbnail>
         <Thumbnail
-          img={categorie == "Culture" ? "/cult.jpg" : "/eng.jpg"}
+          img={categorie == "Culture" ? "/photo.png" : "/eng.jpg"}
           categorie={categorie}
           titre={
             categorie == "Culture"

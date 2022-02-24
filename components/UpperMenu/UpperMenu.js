@@ -7,7 +7,7 @@ import styles from "./UpperMenu.module.scss";
 import { RiFacebookBoxFill, RiInstagramFill } from "react-icons/ri";
 import { MdEmail } from "react-icons/md";
 
-export default function UpperMenu() {
+export default function UpperMenu({ toggle, setToggle }) {
   return (
     <div className={styles.UppermenuContainer}>
       <div className={styles.logo}>
@@ -51,7 +51,7 @@ export default function UpperMenu() {
           </li>
         </ul>
       </div>
-      <div className={styles.subscribe}>
+      <div className={styles.subscribe} onClick={() => setToggle(!toggle)}>
         <p>ABONNEZ-VOUS</p>
       </div>
     </div>

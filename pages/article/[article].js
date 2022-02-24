@@ -5,6 +5,7 @@ import styles from "./article.module.scss";
 import Article from "../../components/article/article";
 import Layout from "../../components/Layout/layout";
 import Share from "../../components/share/share";
+import Abonner from "../../components/abonner/abonner";
 
 export default function Blog() {
   return (
