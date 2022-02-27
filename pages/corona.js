@@ -1,5 +1,5 @@
 import Head from "next/head";
-import {} from "react"
+import { useEffect, useState } from "react";
 
 import styles from "../styles/categories.module.scss";
 
@@ -8,10 +8,38 @@ import Layout from "../components/Layout/layout";
 import Share from "../components/share/share";
 import Thumbnail from "../components/thumbnail/thumbnail";
 
-//db
-import { magdb } from "../db/mag";
+//firebase
+import fire from "../config/fire-config";
+import { collection, onSnapshot, orderBy } from "firebase/firestore";
 
 export default function Archives() {
+  const [articles, setarticles] = useState([]);
+  const [search, setSearch] = useState("");
+
+  useEffect(() => {
+    onSnapshot(
+      collection(fire, "articles"),
+      orderBy("createdAt"),
+
+      (snapshot) => {
+        setarticles(
+          snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
+        );
+      }
+    );
+  }, []);
+
+  const coronaArticles = articles.filter(
+    (article) => article.categorie == "coronavirus"
+  );
+  coronaArticles.sort((a, b) => {
+    return b.createdAt - a.createdAt;
+  });
+
+  const filterArticles = coronaArticles.filter((article) =>
+    article.title.toLowerCase().includes(search.toLowerCase())
+  );
+
   return (
     <div>
       <Head>
@@ -20,88 +48,35 @@ export default function Archives() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Layout>
-        <div style={{ display: "flex" }}>
-          <div className={styles.pageContainer}>
-            <div className={styles.title}>
-              <h1>Coronavirus</h1>
-              <input
-                type="text"
-                placeholder="Recherher par titre d'article"
-              ></input>
+      {articles.length == 0 ? (
+        <img src="/loader.svg" style={{ marginTop: "100px" }}></img>
+      ) : (
+        <Layout>
+          <div style={{ display: "flex" }}>
+            <div className={styles.pageContainer}>
+              <div className={styles.title}>
+                <h1>Coronavirus</h1>
+                <input
+                  type="text"
+                  placeholder="Recherher par titre d'article"
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
+                ></input>
+              </div>
+              <div className={styles.articles}>
+                {filterArticles.map((article) => (
+                  <Thumbnail
+                    img="/blog.png"
+                    key={article.id}
+                    {...article}
+                  ></Thumbnail>
+                ))}
+              </div>
             </div>
-            <div className={styles.articles}>
-              <Thumbnail
-                img="/corona.jpg"
-                categorie="Coronavirus"
-                titre="Variant Omicron BA.2: les chercheurs percent ses premiers secrets"
-                date="Janv 01, 2022"
-              ></Thumbnail>
-
-              <Thumbnail
-                img="/frt.jpg"
-                categorie="Coronavirus"
-                titre="Les frontières maritimes fermées jusqu’à nouvel ordre pour les
-              passagers"
-                date="Janv 15, 2022"
-              ></Thumbnail>
-              <Thumbnail
-                img="/frt.jpg"
-                categorie="Coronavirus"
-                titre="Les frontières maritimes fermées jusqu’à nouvel ordre pour les
-              passagers"
-                date="Janv 15, 2022"
-              ></Thumbnail>
-              <Thumbnail
-                img="/frt.jpg"
-                categorie="Coronavirus"
-                titre="Les frontières maritimes fermées jusqu’à nouvel ordre pour les
-              passagers"
-                date="Janv 15, 2022"
-              ></Thumbnail>
-              <Thumbnail
-                img="/frt.jpg"
-                categorie="Coronavirus"
-                titre="Les frontières maritimes fermées jusqu’à nouvel ordre pour les
-              passagers"
-                date="Janv 15, 2022"
-              ></Thumbnail>
-              <Thumbnail
-                img="/frt.jpg"
-                categorie="Coronavirus"
-                titre="Les frontières maritimes fermées jusqu’à nouvel ordre pour les
-              passagers"
-                date="Janv 15, 2022"
-              ></Thumbnail>
-              <Thumbnail
-                img="/corona.jpg"
-                categorie="Coronavirus"
-                titre="Variant Omicron BA.2: les chercheurs percent ses premiers secrets"
-                date="Janv 01, 2022"
-              ></Thumbnail>
-              <Thumbnail
-                img="/corona.jpg"
-                categorie="Coronavirus"
-                titre="Variant Omicron BA.2: les chercheurs percent ses premiers secrets"
-                date="Janv 01, 2022"
-              ></Thumbnail>
-              <Thumbnail
-                img="/corona.jpg"
-                categorie="Coronavirus"
-                titre="Variant Omicron BA.2: les chercheurs percent ses premiers secrets"
-                date="Janv 01, 2022"
-              ></Thumbnail>
-              <Thumbnail
-                img="/corona.jpg"
-                categorie="Coronavirus"
-                titre="Variant Omicron BA.2: les chercheurs percent ses premiers secrets"
-                date="Janv 01, 2022"
-              ></Thumbnail>
-            </div>
+            <Share></Share>
           </div>
-          <Share></Share>
-        </div>
-      </Layout>
+        </Layout>
+      )}
     </div>
   );
 }

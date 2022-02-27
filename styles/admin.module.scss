@@ -20,9 +20,10 @@ $lower-contrast: #f5f6fb;
       border-radius: 5px;
     }
   }
-  form {
+  .form {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    // flex-direction: column;
     table {
       margin-top: 40px;
     }
@@ -43,13 +44,28 @@ $lower-contrast: #f5f6fb;
       margin-bottom: 10px;
       width: 300px;
     }
-    textarea {
-      height: 400px;
-      width: 550px;
-      padding: 10px;
-      border: 2px solid #0f94b8;
-      border-radius: 5px;
-      margin-bottom: 10px;
+    .textarea {
+      display: flex;
+      flex-direction: column;
+      margin-left: 50px;
+      textarea {
+        height: 400px;
+        width: 550px;
+        padding: 10px;
+        border: 2px solid #0f94b8;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
     }
+  }
+  button {
+    padding: 10px;
+    background-color: #30495d;
+    border: none;
+    color: white;
+    border-radius: 5px;
+
+    font-weight: 600;
+    cursor: pointer;
   }
 }

@@ -136,4 +136,17 @@ $lower-contrast: #f5f6fb;
       border-radius: 5px;
     }
   }
+
+  .creator {
+    position: relative;
+    right: -550px;
+    color: #79809a;
+    font-weight: 600;
+    a {
+      font-weight: 600;
+      cursor: pointer;
+      color: #0f94b8;
+      text-decoration: underline;
+    }
+  }
 }

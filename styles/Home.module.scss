@@ -65,6 +65,7 @@ $lower-contrast: #f5f6fb;
       padding-bottom: 10px;
       border-bottom: 1px #79809a solid;
       cursor: pointer;
+
       @media (max-width: 800px) {
         width: 100%;
       }
@@ -77,12 +78,13 @@ $lower-contrast: #f5f6fb;
           font-size: 13px;
         }
       }
-      h2 {
+      a {
+        font-weight: bolder;
         color: #30495d;
         font-size: 17px;
       }
       &:hover {
-        h2 {
+        a {
           color: #0f94b8;
         }
       }

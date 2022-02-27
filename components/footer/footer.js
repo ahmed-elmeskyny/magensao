@@ -79,6 +79,9 @@ const Footer = () => {
         <img src="/logo.png" width="50px"></img>
         <p>MagEnsao</p>
       </div>
+      <p className={styles.creator}>
+        by <a>Ahmed El meskyny</a>
+      </p>
     </div>
   );
 };

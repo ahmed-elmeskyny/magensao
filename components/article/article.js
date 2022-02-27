@@ -11,7 +11,7 @@ const Article = () => {
         Variant Omicron BA.2: les chercheurs percent ses premiers secrets
       </h1>
       <p className={styles.writer}>Par Quelqu'un, 2 Janv 2022 </p>
-      <img src="/corona.jpg"></img>
+      <img src="/blog.png"></img>
       <p className={styles.article}>
         Contrary to popular belief, Lorem Ipsum is not simply random text. It
         has roots in a piece of classical Latin literature from 45 BC, making it

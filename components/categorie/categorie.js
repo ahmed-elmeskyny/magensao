@@ -27,7 +27,7 @@ const Categorie = ({ categorie }) => {
         nativeMobileScroll="True"
       >
         <Thumbnail
-          img={categorie == "Culture" ? "/unesco.jpg" : "/machine.jpg"}
+          img="/blog.png"
           categorie={categorie}
           titre={
             categorie == "Culture"
@@ -37,7 +37,7 @@ const Categorie = ({ categorie }) => {
           date="Nov 03, 2021"
         ></Thumbnail>
         <Thumbnail
-          img={categorie == "Culture" ? "/photo.png" : "/eng.jpg"}
+          img="/blog.png"
           categorie={categorie}
           titre={
             categorie == "Culture"
@@ -47,19 +47,19 @@ const Categorie = ({ categorie }) => {
           date="Fév 14 , 2022"
         ></Thumbnail>
         <Thumbnail
-          img="/artisanat.jpg"
+          img="/blog.png"
           categorie={categorie}
           titre="Artisanat : lancement du registre national pour la généralisation de l’AMO"
           date="Fév 22 , 2022"
         ></Thumbnail>
         <Thumbnail
-          img="/politique.jpg"
+          img="/blog.png"
           categorie={categorie}
           titre="Après les propos de l’influenceuse Mayssa, un proche de MHE assure qu’il n’est “plus du tout dans le jeu politique”"
           date="Fév 22 , 2022"
         ></Thumbnail>
         <Thumbnail
-          img="/culture.jpg"
+          img="/blog.png"
           categorie={categorie}
           titre="“La poésie est invincible” : Abdellatif Laâbi, la poésie comme nature"
           date="Fév 18 , 2022"

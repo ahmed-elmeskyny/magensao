@@ -1,9 +1,33 @@
 import Head from "next/head";
 
+//react
+import react, { useState } from "react";
+import { useForm } from "react-hook-form";
+
 //styles
 import styles from "../styles/admin.module.scss";
 
+//firebase
+import fire from "../config/fire-config";
+import { collection, addDoc } from "firebase/firestore";
+
 export default function Home() {
+  const { register, handleSubmit, reset } = useForm();
+  const [loader, setLoader] = useState(false);
+  const onSubmit = async (data) => {
+    setLoader(true);
+    reset("");
+    try {
+      const docRef = await addDoc(collection(fire, "articles"), {
+        ...data,
+        createdAt: new Date().getTime(),
+      });
+    } catch (e) {
+      console.error("Error adding document: ", e);
+    }
+    setLoader(false);
+  };
+
   return (
     <div>
       <Head>
@@ -15,85 +39,113 @@ export default function Home() {
         <div className={styles.logo}>
           <img src="/logo.png" width="35px"></img>
           <p>MagEnsao</p>
-        </div>{" "}
-        <form>
-          <table>
-            <tr>
-              <td>
-                <label>Titre :</label>
-              </td>
-              <td>
-                {" "}
-                <input
-                  type="text"
-                  placeholder="entrez le titre"
-                  name="titre"
-                ></input>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label>Écrit par :</label>
-              </td>
-              <td>
-                {" "}
-                <input type="text" placeholder="entrez l'auteur"></input>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label>Date :</label>
-              </td>
-              <td>
-                {" "}
-                <input type="date"></input>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label>Categorie :</label>
-              </td>
-              <td>
-                {" "}
-                <select name="categorie">
-                  <option value="coronavirus">coronavirus</option>
-                  <option value="politique">politique</option>
-                  <option value="economie">economie</option>
-                  <option value="ingénierie">ingénierie</option>
-                </select>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label>placer l'article :</label>
-              </td>
-              <td>
-                {" "}
-                <select name="categorie">
-                  <option value="slider">slider</option>
-                  <option value="top">top articles</option>
-                  <option value="essentiel">essentiel</option>
-                  <option value="autre">autre</option>
-                </select>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label>partie de l'article : </label>
-              </td>
-              <td>
-                {" "}
-                <input
-                  type="text"
-                  placeholder=" ..... s'il appartient au slider"
-                  name="titre"
-                ></input>
-              </td>
-            </tr>
-          </table>
-          <label>l'Article :</label>
-          <textarea placeholder="article......"></textarea>
-        </form>
+        </div>
+        {loader ? (
+          <img src="/loader.svg" style={{ marginTop: "100px" }}></img>
+        ) : (
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <div className={styles.form}>
+              <table>
+                <tbody>
+                  <tr>
+                    <td>
+                      <label>Titre :</label>
+                    </td>
+                    <td>
+                      {" "}
+                      <input
+                        type="text"
+                        placeholder="entrez le titre"
+                        {...register("title", {
+                          required: "Ce champ est obligatoire",
+                        })}
+                      ></input>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label>Écrit par :</label>
+                    </td>
+                    <td>
+                      {" "}
+                      <input
+                        type="text"
+                        placeholder="entrez l'auteur"
+                        {...register("author", {
+                          required: "Ce champ est obligatoire",
+                        })}
+                      ></input>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <label>Categorie :</label>
+                    </td>
+                    <td>
+                      {" "}
+                      <select
+                        {...register("categorie", {
+                          required: "Ce champ est obligatoire",
+                        })}
+                      >
+                        <option value="coronavirus">coronavirus</option>
+                        <option value="politique">politique</option>
+                        <option value="economie">economie</option>
+                        <option value="ingénierie">ingénierie</option>
+                        <option value="culture">culture</option>
+                        <option value="sport">sport</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label>placer l'article :</label>
+                    </td>
+                    <td>
+                      {" "}
+                      <select
+                        {...register("position", {
+                          required: "Ce champ est obligatoire",
+                        })}
+                      >
+                        <option value="slider">slider</option>
+                        <option value="top">top articles</option>
+                        <option value="essentiel">essentiel</option>
+                        <option value="autre">autre</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label>partie de l'article : </label>
+                    </td>
+                    <td>
+                      {" "}
+                      <input
+                        type="text"
+                        placeholder=" ..... s'il appartient au slider"
+                        {...register("slug", {
+                          required: "Ce champ est obligatoire",
+                        })}
+                      ></input>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div className={styles.textarea}>
+                <label>l'Article :</label>
+                <textarea
+                  placeholder="article......"
+                  {...register("article", {
+                    required: "Ce champ est obligatoire",
+                  })}
+                ></textarea>
+              </div>
+            </div>
+            <button type="submit"> Ajouter </button>
+          </form>
+        )}
       </div>
     </div>
   );
