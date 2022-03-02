@@ -1,0 +1,28 @@
+$main-color: #0f94b8;
+$second-color: #27333a;
+$main-text-color: #30495d;
+$second-text-color: #79809a;
+$lower-contrast: #f5f6fb;
+
+.LoaderContainer {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    p {
+      margin-left: 5px;
+      font-weight: 500;
+      background-color: $second-color;
+      color: white;
+      padding: 5px;
+      border-radius: 5px;
+    }
+  }
+}

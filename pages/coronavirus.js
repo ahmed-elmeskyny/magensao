@@ -7,6 +7,7 @@ import styles from "../styles/categories.module.scss";
 import Layout from "../components/Layout/layout";
 import Share from "../components/share/share";
 import Thumbnail from "../components/thumbnail/thumbnail";
+import Loader from "../components/loader/loader";
 
 //firebase
 import fire from "../config/fire-config";
@@ -49,7 +50,7 @@ export default function Archives() {
       </Head>
 
       {articles.length == 0 ? (
-        <img src="/loader.svg" style={{ marginTop: "100px" }}></img>
+        <Loader></Loader>
       ) : (
         <Layout>
           <div style={{ display: "flex" }}>

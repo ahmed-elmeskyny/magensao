@@ -10,6 +10,7 @@ import Slider from "../components/slideshow/slider";
 import Thumbnail from "../components/thumbnail/thumbnail";
 import Abonner from "../components/abonner/abonner";
 import Categorie from "../components/categorie/categorie";
+import Loader from "../components/loader/loader";
 
 //firebase
 import fire, { getFormattedDate } from "../config/fire-config";
@@ -52,7 +53,7 @@ export default function Home() {
       </Head>
 
       {articles.length == 0 ? (
-        <img src="/loader.svg" style={{ marginTop: "100px" }}></img>
+        <Loader></Loader>
       ) : (
         <Layout>
           <Slider articles={sliderArticles}></Slider>

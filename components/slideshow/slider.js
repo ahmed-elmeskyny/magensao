@@ -67,7 +67,9 @@ const Slider = ({ articles }) => {
                   <a className={styles.link1} href={`/article/${article.id}`}>
                     LIRE L'ARTICLE{" "}
                   </a>
-                  <a className={styles.link2}>TOUS LES ARTICLES LIÉS</a>
+                  <a className={styles.link2} href={`/${article.categorie}`}>
+                    TOUS LES ARTICLES LIÉS
+                  </a>
                 </div>
               </div>
             </div>
