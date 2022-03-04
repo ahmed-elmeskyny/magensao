@@ -5,7 +5,7 @@ import styles from "./footer.module.scss";
 import { RiFacebookBoxFill, RiInstagramFill } from "react-icons/ri";
 import { MdEmail } from "react-icons/md";
 
-const Footer = () => {
+const Footer = ({ toggle, setToggle }) => {
   return (
     <div className={styles.footerContainer}>
       <div className={styles.social}>
@@ -34,7 +34,9 @@ const Footer = () => {
             <a>Accueil</a>
           </li>
           <li>
-            <a href="#">Abonnement</a>
+            <a href="#" onClick={() => setToggle(!toggle)}>
+              Abonnement
+            </a>
           </li>
           <li>
             <a href="#">A propos de MagEnsao</a>

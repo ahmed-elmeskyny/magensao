@@ -15,7 +15,7 @@ import Abonner from "../../components/abonner/abonner";
 import Loader from "../../components/loader/loader";
 
 //utils
-import fire from "../../config/fire-config";
+import { fire } from "../../config/fire-config";
 import { doc, getDoc } from "firebase/firestore";
 
 export default function Blog() {

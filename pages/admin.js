@@ -8,19 +8,32 @@ import { useForm } from "react-hook-form";
 import styles from "../styles/admin.module.scss";
 
 //firebase
-import fire from "../config/fire-config";
+import { fire, storage } from "../config/fire-config";
 import { collection, addDoc } from "firebase/firestore";
+import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
+
+import Loader from "../components/loader/loader";
 
 export default function Home() {
   const { register, handleSubmit, reset } = useForm();
   const [loader, setLoader] = useState(false);
-  const onSubmit = async (data) => {
+
+  const onSubmit = (data) => {
     setLoader(true);
+    console.log(loader);
     reset("");
     try {
-      const docRef = await addDoc(collection(fire, "articles"), {
-        ...data,
-        createdAt: new Date().getTime(),
+      const storage = getStorage();
+      const imgRef = ref(storage, data.img[0].name);
+      uploadBytes(imgRef, data.img[0]).then((snapshot) => {
+        console.log("Uploaded a blob or file!");
+        getDownloadURL(imgRef).then(async (url) => {
+          const docRef = await addDoc(collection(fire, "articles"), {
+            ...data,
+            img: url,
+            createdAt: new Date().getTime(),
+          });
+        });
       });
     } catch (e) {
       console.error("Error adding document: ", e);
@@ -41,7 +54,7 @@ export default function Home() {
           <p>MagEnsao</p>
         </div>
         {loader ? (
-          <img src="/loader.svg" style={{ marginTop: "100px" }}></img>
+          <Loader></Loader>
         ) : (
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className={styles.form}>
@@ -126,6 +139,21 @@ export default function Home() {
                         type="text"
                         placeholder=" ..... s'il appartient au slider"
                         {...register("slug", {
+                          required: "Ce champ est obligatoire",
+                        })}
+                      ></input>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label>image de l'article :</label>
+                    </td>
+                    <td>
+                      {" "}
+                      <input
+                        type="file"
+                        placeholder="entrez l'image"
+                        {...register("img", {
                           required: "Ce champ est obligatoire",
                         })}
                       ></input>

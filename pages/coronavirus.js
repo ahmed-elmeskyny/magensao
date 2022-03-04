@@ -10,7 +10,7 @@ import Thumbnail from "../components/thumbnail/thumbnail";
 import Loader from "../components/loader/loader";
 
 //firebase
-import fire from "../config/fire-config";
+import { fire } from "../config/fire-config";
 import { collection, onSnapshot, orderBy } from "firebase/firestore";
 
 export default function Archives() {

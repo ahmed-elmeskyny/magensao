@@ -13,7 +13,7 @@ import Categorie from "../components/categorie/categorie";
 import Loader from "../components/loader/loader";
 
 //firebase
-import fire, { getFormattedDate } from "../config/fire-config";
+import { fire, storage, getFormattedDate } from "../config/fire-config";
 import { collection, onSnapshot } from "firebase/firestore";
 
 export default function Home() {
@@ -68,13 +68,12 @@ export default function Home() {
                   justifyContent: "space-around",
                 }}
               >
-                {TopArticles.map((article) => (
-                  <Thumbnail
-                    img="/blog.png"
-                    key={article.id}
-                    {...article}
-                  ></Thumbnail>
-                ))}
+                {TopArticles.map(
+                  (article, idx) =>
+                    idx < 4 && (
+                      <Thumbnail key={article.id} {...article}></Thumbnail>
+                    )
+                )}
               </div>
             </div>
             <div className={styles.newsContainer}>
@@ -92,10 +91,18 @@ export default function Home() {
           </div>
 
           <Abonner></Abonner>
-          <Categorie categorie="Ingénierie"></Categorie>
-          <Categorie categorie="Culture"></Categorie>
-          <Categorie categorie="Ingénierie"></Categorie>
-          <Categorie categorie="Culture"></Categorie>
+          <Categorie
+            categorie="Ingénierie"
+            articles={articles.filter(
+              (article) => article.categorie == "ingénierie"
+            )}
+          ></Categorie>
+          <Categorie
+            categorie="Culture"
+            articles={articles.filter(
+              (article) => article.categorie == "culture"
+            )}
+          ></Categorie>
         </Layout>
       )}
     </div>

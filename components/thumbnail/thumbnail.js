@@ -7,7 +7,7 @@ import { getFormattedDate } from "../../config/fire-config";
 const Thumbnail = ({ img, categorie, createdAt, title, id }) => {
   return (
     <a className={styles.container} href={`/article/${id}`}>
-      <img src={img}></img>
+      <img src={img ? img : "/blog.png"}></img>
       <div>
         <p className={styles.date}>
           {getFormattedDate(createdAt)} - <span>{categorie}</span>

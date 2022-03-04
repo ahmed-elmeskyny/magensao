@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
+import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBGdswPIyQppHJ_qsVHAcfOVbXHhPAcOAI",
@@ -12,7 +13,9 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 
-const fire = getFirestore(app);
+export const fire = getFirestore(app);
+
+export const storage = getStorage(app);
 
 export const getFormattedDate = (milliseconds) => {
   const formatOptions = {
@@ -23,4 +26,3 @@ export const getFormattedDate = (milliseconds) => {
   const date = new Date(milliseconds);
   return date.toLocaleDateString(undefined, formatOptions);
 };
-export default fire;

@@ -54,8 +54,11 @@ const Slider = ({ articles }) => {
             <div className={styles.slide}>
               <div
                 className={styles.image}
-                style={{ backgroundImage: "url(/blog.png)" }}
-              ></div>
+                // style={{ backgroundImage: `url(${article.img})` }}
+              >
+                <img src={article.img} height="100%"></img>
+              </div>
+
               <div className={styles.description}>
                 <span className={styles.date}>
                   {" "}
