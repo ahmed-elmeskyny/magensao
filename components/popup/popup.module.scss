@@ -32,6 +32,7 @@ $lower-contrast: #f5f6fb;
         flex-wrap: wrap;
         margin: 5px;
         margin-bottom: 30px;
+        justify-content: center;
       }
       .abonn {
         width: 50%;
@@ -83,27 +84,27 @@ $lower-contrast: #f5f6fb;
       .edition1 {
         width: 150px;
         @media (max-width: 800px) {
-          width: 120px;
+          width: 100px;
         }
       }
       .edition2 {
         width: 120px;
         @media (max-width: 800px) {
-          width: 110px;
+          width: 80px;
         }
       }
       .edition3 {
         width: 90px;
         @media (max-width: 800px) {
-          width: 90px;
+          width: 70px;
         }
       }
 
       .close {
         position: relative;
         font-size: 25px;
-        top: -15px;
-        right: 15px;
+        top: -20px;
+        // right: 15px;
         cursor: pointer;
       }
     }

@@ -16,6 +16,7 @@ $lower-contrast: #f5f6fb;
     width: 100%;
     background-color: white;
     overflow-x: scroll;
+    z-index: 10000;
   }
   ul {
     list-style: none;
