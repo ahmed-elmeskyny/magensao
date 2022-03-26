@@ -39,7 +39,7 @@ const Footer = ({ toggle, setToggle }) => {
             </a>
           </li>
           <li>
-            <a href="#">A propos de MagEnsao</a>
+            <a href="/apropos">A propos de MagEnsao</a>
           </li>
           {/* <li>
             <a href="#"></a>

@@ -1,5 +1,13 @@
 export const magdb = [
   {
+    id: 8,
+    thumbnail: "/magensao8.png",
+    title: "MagEnsao N°8",
+    date: "Mars, 2022",
+    pdf: "https://tinyurl.com/magensao-8-pdf",
+    read: " https://tinyurl.com/magensao-8-read",
+  },
+  {
     id: 7,
     thumbnail: "/magensao7.jpg",
     title: "MagEnsao N°7",

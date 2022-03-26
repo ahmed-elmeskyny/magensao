@@ -1,4 +1,5 @@
 import react from "react";
+import parse from "html-react-parser";
 
 //styles
 import styles from "./article.module.scss";
@@ -13,8 +14,8 @@ const Article = ({ title, author, categorie, article, createdAt, img }) => {
       <p className={styles.writer}>
         Publié le {getFormattedDate(createdAt)} , {author}
       </p>
-      <img src={img}></img>
-      <p className={styles.article}>{article}</p>
+      {/* <img src={img}></img> */}
+      <p className={styles.article}>{parse(`${article}`)}</p>
     </div>
   );
 };

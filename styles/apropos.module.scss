@@ -1,0 +1,164 @@
+$main-color: #0f94b8;
+$second-color: #27333a;
+$main-text-color: #30495d;
+$second-text-color: #79809a;
+$lower-contrast: #f5f6fb;
+
+.speechContainer {
+  margin-bottom: 50px;
+  @media (max-width: 800px) {
+    margin-top: 120px;
+    padding: 10px;
+  }
+  .motContainer {
+    margin-top: 30px;
+    h2 {
+      font-weight: 600;
+      color: #30495d;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      font-size: 30px;
+      display: flex;
+      align-items: center;
+      @media (max-width: 800px) {
+        font-size: 25px;
+      }
+      div {
+        background-color: #0f94b8;
+        width: 105px;
+        height: 5px;
+        margin-right: 10px;
+        @media (max-width: 900px) {
+          width: 50px;
+        }
+      }
+    }
+    .mot {
+      //   padding: 15px;
+      //   margin: 0px 25px;
+      .img {
+        width: 200px;
+        height: 200px;
+        float: left;
+        // margin-left: 10px;
+        margin-right: 20px;
+        overflow: hidden;
+        border-radius: 10px;
+        background-image: url("../public/president.jpeg");
+        background-size: cover;
+        background-position: center;
+        @media (max-width: 800px) {
+          width: 200px;
+          height: 200px;
+        }
+      }
+      p {
+        text-align: justify;
+        font-weight: 600;
+        color: #79809a;
+        line-height: 30px;
+        margin-bottom: 30px;
+      }
+    }
+    .sgnature {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: flex-end;
+      margin-top: 20px;
+      margin-right: 40px;
+      text-align: center;
+      color: #79809a;
+      font-size: 14px;
+      font-weight: bolder;
+    }
+  }
+}
+
+.aproposContainer {
+  @media (max-width: 800px) {
+    width: 100%;
+    padding: 10px;
+  }
+  h2 {
+    font-weight: 600;
+    color: #30495d;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    @media (max-width: 800px) {
+      font-size: 25px;
+    }
+    div {
+      background-color: #0f94b8;
+      width: 105px;
+      height: 5px;
+      margin-right: 10px;
+      @media (max-width: 900px) {
+        width: 50px;
+      }
+    }
+  }
+  p {
+    text-align: justify;
+    font-weight: 600;
+    color: #79809a;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+.tree {
+  .profile {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    margin-right: 15px;
+    @media (max-width: 500px) {
+      width: 150px;
+    }
+    .pdp {
+      width: 170px;
+      height: 170px;
+      border-radius: 5px;
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 5px;
+      @media (max-width: 500px) {
+        width: 140px;
+        height: 140px;
+      }
+    }
+    .name {
+      font-size: 20px;
+      padding: 5px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      h5 {
+        background-color: #30495d;
+        color: white;
+        margin-bottom: 5px;
+        padding: 5px;
+        @media (max-width: 800px) {
+          font-size: 12px;
+        }
+      }
+      p {
+        font-size: 16px;
+        color: #79809a;
+        font-weight: 600;
+        margin-bottom: 10px;
+        @media (max-width: 800px) {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}

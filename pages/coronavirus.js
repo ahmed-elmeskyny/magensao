@@ -53,7 +53,11 @@ export default function Archives() {
         <Loader></Loader>
       ) : (
         <Layout>
-          <div style={{ display: "flex" }}>
+          <div
+            style={{
+              display: "flex",
+            }}
+          >
             <div className={styles.pageContainer}>
               <div className={styles.title}>
                 <h1>Coronavirus</h1>

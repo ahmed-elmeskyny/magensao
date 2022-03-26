@@ -5,6 +5,7 @@ import styles from "../styles/archive.module.scss";
 //components
 import Layout from "../components/Layout/layout";
 import Share from "../components/share/share";
+import Abonn from "../components/abonner/abonner";
 
 //db
 import { magdb } from "../db/mag";
@@ -64,6 +65,7 @@ export default function Archives() {
           </div>
           <Share></Share>
         </div>
+        <Abonn></Abonn>
       </Layout>
     </div>
   );

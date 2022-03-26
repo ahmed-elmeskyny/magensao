@@ -1,4 +1,5 @@
 import Head from "next/head";
+import dynamic from "next/dynamic";
 
 //react
 import react, { useState } from "react";
@@ -6,6 +7,7 @@ import { useForm } from "react-hook-form";
 
 //styles
 import styles from "../styles/admin.module.scss";
+import "react-quill/dist/quill.snow.css";
 
 //firebase
 import { fire, storage } from "../config/fire-config";
@@ -14,9 +16,51 @@ import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 
 import Loader from "../components/loader/loader";
 
+const QuillNoSSRWrapper = dynamic(import("react-quill"), {
+  ssr: false,
+  loading: () => <p>Loading ...</p>,
+});
+
+const modules = {
+  toolbar: [
+    [{ header: "1" }, { header: "2" }, { font: [] }],
+    [{ size: [] }],
+    ["bold", "italic", "underline", "strike", "blockquote"],
+    [
+      { list: "ordered" },
+      { list: "bullet" },
+      { indent: "-1" },
+      { indent: "+1" },
+    ],
+    ["link", "image", "video"],
+    ["clean"],
+  ],
+  clipboard: {
+    matchVisual: false,
+  },
+};
+
+const formats = [
+  "header",
+  "font",
+  "size",
+  "bold",
+  "italic",
+  "underline",
+  "strike",
+  "blockquote",
+  "list",
+  "bullet",
+  "indent",
+  "link",
+  "image",
+  "video",
+];
+
 export default function Home() {
   const { register, handleSubmit, reset } = useForm();
   const [loader, setLoader] = useState(false);
+  const [value, setValue] = useState("");
 
   const onSubmit = (data) => {
     setLoader(true);
@@ -30,6 +74,7 @@ export default function Home() {
         getDownloadURL(imgRef).then(async (url) => {
           const docRef = await addDoc(collection(fire, "articles"), {
             ...data,
+            article: value,
             img: url,
             createdAt: new Date().getTime(),
           });
@@ -39,6 +84,7 @@ export default function Home() {
       console.error("Error adding document: ", e);
     }
     setLoader(false);
+    setValue("");
   };
 
   return (
@@ -53,6 +99,14 @@ export default function Home() {
           <img src="/logo.png" width="35px"></img>
           <p>MagEnsao</p>
         </div>
+        <label>l'Article :</label>
+        <QuillNoSSRWrapper
+          modules={modules}
+          formats={formats}
+          value={value}
+          onChange={setValue}
+          theme="snow"
+        />
         {loader ? (
           <Loader></Loader>
         ) : (
@@ -74,8 +128,6 @@ export default function Home() {
                         })}
                       ></input>
                     </td>
-                  </tr>
-                  <tr>
                     <td>
                       <label>Écrit par :</label>
                     </td>
@@ -88,27 +140,6 @@ export default function Home() {
                           required: "Ce champ est obligatoire",
                         })}
                       ></input>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>
-                      <label>Categorie :</label>
-                    </td>
-                    <td>
-                      {" "}
-                      <select
-                        {...register("categorie", {
-                          required: "Ce champ est obligatoire",
-                        })}
-                      >
-                        <option value="coronavirus">coronavirus</option>
-                        <option value="politique">politique</option>
-                        <option value="economie">economie</option>
-                        <option value="ingénierie">ingénierie</option>
-                        <option value="culture">culture</option>
-                        <option value="sport">sport</option>
-                      </select>
                     </td>
                   </tr>
                   <tr>
@@ -128,7 +159,26 @@ export default function Home() {
                         <option value="autre">autre</option>
                       </select>
                     </td>
+                    <td>
+                      <label>Categorie :</label>
+                    </td>
+                    <td>
+                      {" "}
+                      <select
+                        {...register("categorie", {
+                          required: "Ce champ est obligatoire",
+                        })}
+                      >
+                        <option value="coronavirus">coronavirus</option>
+                        <option value="politique">politique</option>
+                        <option value="economie">economie</option>
+                        <option value="ingénierie">ingénierie</option>
+                        <option value="culture">culture</option>
+                        <option value="sport">sport</option>
+                      </select>
+                    </td>
                   </tr>
+
                   <tr>
                     <td>
                       <label>partie de l'article : </label>
@@ -143,8 +193,6 @@ export default function Home() {
                         })}
                       ></input>
                     </td>
-                  </tr>
-                  <tr>
                     <td>
                       <label>image de l'article :</label>
                     </td>
@@ -161,15 +209,6 @@ export default function Home() {
                   </tr>
                 </tbody>
               </table>
-              <div className={styles.textarea}>
-                <label>l'Article :</label>
-                <textarea
-                  placeholder="article......"
-                  {...register("article", {
-                    required: "Ce champ est obligatoire",
-                  })}
-                ></textarea>
-              </div>
             </div>
             <button type="submit"> Ajouter </button>
           </form>

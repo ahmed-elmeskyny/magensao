@@ -16,7 +16,9 @@ export default function Layout(props) {
       <Popup toggle={toggle} setToggle={setToggle}></Popup>
       <UpperMenu toggle={toggle} setToggle={setToggle}></UpperMenu>
       <LowerMenu></LowerMenu>
+
       {props.children}
+
       <Footer toggle={toggle} setToggle={setToggle}></Footer>
     </div>
   );

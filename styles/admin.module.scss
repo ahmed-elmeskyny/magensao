@@ -29,6 +29,7 @@ $lower-contrast: #f5f6fb;
     }
     label {
       margin: 10px 0px;
+      margin-left: 5px;
     }
     input {
       padding: 10px;
@@ -49,8 +50,8 @@ $lower-contrast: #f5f6fb;
       flex-direction: column;
       margin-left: 50px;
       textarea {
-        height: 400px;
-        width: 550px;
+        // height: 400px;
+        // width: 550px;
         padding: 10px;
         border: 2px solid #0f94b8;
         border-radius: 5px;

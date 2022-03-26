@@ -1,11 +1,14 @@
 import React from "react";
 import { Slide } from "react-slideshow-image";
+import { useState, useEffect } from "react";
 
 //styles
 import "react-slideshow-image/dist/styles.css";
 import styles from "./slider.module.scss";
 
 import { getFormattedDate } from "../../config/fire-config";
+
+import { magdb } from "../../db/mag";
 
 const properties = {
   indicators: true,
@@ -14,17 +17,36 @@ const properties = {
 };
 
 const Slider = ({ articles }) => {
+  const [width, setWidth] = useState(window.innerWidth);
+  const breakpoint = 800;
+
+  useEffect(() => {
+    window.addEventListener("resize", () => setWidth(window.innerWidth));
+  }, []);
+
   return (
     <div>
-      <Slide easing="ease" {...properties} className={styles.slides}>
+      <Slide
+        easing="ease"
+        {...properties}
+        className={styles.slides}
+        style={width < breakpoint ? { width: width } : { width: "100%" }}
+      >
         <div className={styles.eachSlide}>
           <div className={styles.slide}>
-            <div className={styles.image} style={{ width: "280px" }}>
-              <img src="/magensao7.png" width="280px"></img>
+            <div
+              className={styles.image}
+              style={
+                width < breakpoint ? { width: width - 38 } : { width: "290px" }
+              }
+            >
+              <img src={magdb[0].thumbnail} width="280px"></img>
             </div>
             <div className={styles.description}>
-              <span className={styles.date}>Février, 2022</span>
-              <h1 className={styles.title}>MagEnsao N°7 DU Février, 2022 </h1>
+              <span className={styles.date}>{magdb[0].date}</span>
+              <h1 className={styles.title}>
+                {magdb[0].title} DU {magdb[0].date}
+              </h1>
               <p>
                 It is a long established fact that a reader will be distracted
                 by the readable content of a page when looking at its layout.
@@ -36,10 +58,7 @@ const Slider = ({ articles }) => {
                 ipsum' will uncover many web sites still in their infancy...
               </p>
               <div className={styles.magazineLinks}>
-                <a
-                  className={styles.link1}
-                  href="https://tinyurl.com/magensao-7-read"
-                >
+                <a className={styles.link1} href={magdb[0].read}>
                   LIRE CETTE ÉDITION{" "}
                 </a>
                 <a className={styles.link2} href="/archives">
@@ -54,6 +73,9 @@ const Slider = ({ articles }) => {
             <div className={styles.slide}>
               <div
                 className={styles.image}
+                style={
+                  width < breakpoint ? { width: width - 20 } : { width: "100%" }
+                }
                 // style={{ backgroundImage: `url(${article.img})` }}
               >
                 <img src={article.img} height="100%"></img>

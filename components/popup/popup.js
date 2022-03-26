@@ -1,5 +1,6 @@
 //react
 import React, { useState } from "react";
+import { useForm } from "react-hook-form";
 
 //styles
 import styles from "./popup.module.scss";
@@ -7,7 +8,19 @@ import styles from "./popup.module.scss";
 //icons
 import { GrFormClose } from "react-icons/gr";
 
+import { fire } from "../../config/fire-config";
+import { collection, addDoc } from "firebase/firestore";
+
 const Popup = ({ toggle, setToggle }) => {
+  const { register, handleSubmit, reset } = useForm();
+
+  const onSubmit = (data) => {
+    reset("");
+    setToggle(!toggle);
+    const docRef = addDoc(collection(fire, "subscribes"), {
+      ...data,
+    });
+  };
   return (
     <div
       className={styles.popupContainer}
@@ -28,8 +41,15 @@ const Popup = ({ toggle, setToggle }) => {
               recevoir les derniers articles et editions directement dans votre
               boîte de réception
             </p>
-            <input type="email" placeholder="Votre E-mail"></input>
-            <button type="submit">inscrivez-vous</button>
+
+            <form onSubmit={handleSubmit(onSubmit)}>
+              <input
+                type="email"
+                placeholder="Votre E-mail"
+                {...register("email")}
+              ></input>
+              <button type="submit">inscrivez-vous</button>
+            </form>
           </div>
           <div className={styles.edition}>
             <img src="/magensao7.png" className={styles.edition1}></img>

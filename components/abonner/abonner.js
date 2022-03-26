@@ -1,7 +1,23 @@
+//react
+import React from "react";
+import { useForm } from "react-hook-form";
+
 //styles
 import styles from "./abonner.module.scss";
 
+//firebase
+import { fire } from "../../config/fire-config";
+import { collection, addDoc } from "firebase/firestore";
+
 const Abonner = () => {
+  const { register, handleSubmit, reset } = useForm();
+
+  const onSubmit = (data) => {
+    const docRef = addDoc(collection(fire, "subscribes"), {
+      ...data,
+    });
+  };
+
   return (
     <div className={styles.abonnContainer}>
       <div className={styles.abonn}>
@@ -13,8 +29,14 @@ const Abonner = () => {
           recevoir les derniers articles directement dans votre boîte de
           réception
         </p>
-        <input type="email" placeholder="Votre E-mail"></input>
-        <button type="submit">inscrivez-vous</button>
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <input
+            type="email"
+            placeholder="Votre E-mail"
+            {...register("email")}
+          ></input>
+          <button type="submit">inscrivez-vous</button>
+        </form>
       </div>
       <div className={styles.edition}>
         <img src="/magensao7.png" className={styles.edition1}></img>

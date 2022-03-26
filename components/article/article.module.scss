@@ -46,6 +46,29 @@ $lower-contrast: #f5f6fb;
   }
 }
 
+.article {
+  h2 {
+    color: #30495d;
+    font-weight: 600;
+  }
+  br {
+    display: none;
+  }
+  ul {
+    margin-left: 40px;
+  }
+  img {
+    width: 400px;
+    border-radius: 5px;
+    float: left;
+    margin-right: 15px;
+
+    @media (max-width: 800px) {
+      width: 100%;
+    }
+  }
+}
+
 .mobile {
   display: flex;
   align-items: flex-start;
