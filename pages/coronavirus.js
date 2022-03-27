@@ -74,6 +74,7 @@ export default function Archives() {
                     img="/blog.png"
                     key={article.id}
                     {...article}
+                    margin
                   ></Thumbnail>
                 ))}
               </div>

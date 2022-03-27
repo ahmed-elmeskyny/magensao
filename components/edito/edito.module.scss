@@ -4,48 +4,44 @@ $main-text-color: #30495d;
 $second-text-color: #79809a;
 $lower-contrast: #f5f6fb;
 
-.slides {
+.wrapper {
+  .title {
+    color: #0f94b8;
+    font-weight: 700;
+    font-size: 25px;
+    margin-left: 5px;
+  }
   @media (max-width: 800px) {
     margin-top: 105px;
   }
-}
-.eachSlide {
-  border-radius: 10px;
-  cursor: grab;
-
-  .slide {
+  .editoContainer {
+    margin-top: 10px;
     display: flex;
-    justify-content: center;
     @media (max-width: 800px) {
-      // width: 100px;
-      padding: 10px;
+      margin-top: 100px;
       flex-direction: column;
+      margin-top: 10px;
     }
-    .image {
+    .imgContainer {
       border-radius: 5px;
-      overflow: hidden;
-      margin-right: 40px;
-      width: 500px;
-      height: 400px;
+      width: 400px;
       background-size: cover;
-      @media (min-width: 1300px) {
-        width: 700px;
-      }
       @media (max-width: 800px) {
         width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        height: 350px;
       }
     }
-    .description {
-      width: 80%;
+    .edito {
+      padding: 0px 10px;
+      margin-left: 5px;
+      padding-right: 0;
+      width: 60%;
       @media (max-width: 800px) {
         width: 100%;
-        margin-top: -30px;
-        padding: 10px;
+        margin: 0;
+        margin-top: -25px;
       }
-      .date {
+      span {
         color: $second-text-color;
         font-weight: 900;
         margin-bottom: 30px;
@@ -53,11 +49,10 @@ $lower-contrast: #f5f6fb;
           background-color: white;
           padding: 10px 20px;
           margin-left: 30%;
-
           border-top: #0f94b8 solid 3px;
         }
       }
-      .title {
+      h1 {
         margin-top: 5px;
         margin-bottom: 10px;
         color: $main-text-color;
@@ -67,10 +62,11 @@ $lower-contrast: #f5f6fb;
       }
       p {
         line-height: 25px;
+        color: #79809a;
+        font-weight: 300;
       }
-
-      .magazineLinks {
-        margin-top: 35px;
+      .Links {
+        margin-top: 10px;
         display: flex;
         flex-wrap: wrap;
         @media (max-width: 800px) {
@@ -98,7 +94,7 @@ $lower-contrast: #f5f6fb;
           padding: 10px 20px;
           margin-right: 20px;
           cursor: pointer;
-          margin-top: 10px;
+          // margin-top: 10px;
         }
       }
     }

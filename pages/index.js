@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 
 //components
 import Layout from "../components/Layout/layout";
-import Slider from "../components/slideshow/slider";
+import Edito from "../components/edito/edito";
 import Thumbnail from "../components/thumbnail/thumbnail";
 import Abonner from "../components/abonner/abonner";
 import Categorie from "../components/categorie/categorie";
@@ -44,6 +44,15 @@ export default function Home() {
     return b.createdAt - a.createdAt;
   });
 
+  const alaune = articles.filter((article) => article.position == "alaune");
+  alaune.sort((a, b) => {
+    return b.createdAt - a.createdAt;
+  });
+  const edito = articles.filter((article) => article.position == "edito");
+  edito.sort((a, b) => {
+    return b.createdAt - a.createdAt;
+  });
+  console.log(edito);
   return (
     <div>
       <Head>
@@ -56,53 +65,75 @@ export default function Home() {
         <Loader></Loader>
       ) : (
         <Layout>
-          <Slider articles={sliderArticles}></Slider>
+          {/* <Slider articles={sliderArticles}></Slider> */}
+          <Edito article={edito[0]}></Edito>
           <div className={styles.topArticles}>
             <div className={styles.articles}>
-              <h2 className={styles.title}>Articles du mois</h2>
+              <h2 className={styles.une}>A LA UNE </h2>
+
+              <div className={styles.uneContainer}>
+                <div
+                  className={styles.imgContainer}
+                  style={{ backgroundImage: `url(${alaune[0].img})` }}
+                ></div>
+                <div className={styles.description}>
+                  <p className={styles.uneSpan}>
+                    {alaune[0].categorie},{" "}
+                    {getFormattedDate(alaune[0].createdAt)}
+                  </p>
+                  <h1>{alaune[0].title}</h1>
+                  <p>{alaune[0].slug}.....</p>
+                  <div className={styles.Links}>
+                    <a
+                      className={styles.link1}
+                      href={`/article/${alaune[0].id}`}
+                    >
+                      LIRE L' ARTICLE{" "}
+                    </a>
+                    <a className={styles.link2} href="/archives">
+                      TOUS LES ARTICLES LIÉS
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className={styles.articles}>
+              <h2 className={styles.title}>ARTICLES DU MOIS</h2>
               <div
                 style={{
                   display: "flex",
                   flexWrap: "wrap",
                   // alignItems: "center",
-                  justifyContent: "space-around",
+                  justifyContent: "center",
                 }}
               >
                 {TopArticles.map(
                   (article, idx) =>
-                    idx < 4 && (
-                      <Thumbnail key={article.id} {...article}></Thumbnail>
+                    idx < 6 && (
+                      <Thumbnail
+                        key={article.id}
+                        {...article}
+                        margin
+                      ></Thumbnail>
                     )
                 )}
               </div>
             </div>
-            <div className={styles.newsContainer}>
-              <h2 className={styles.essentiel}>L’ESSENTIEL</h2>
-              {essentielArticles.map((article) => (
-                <div className={styles.news} key={article.id}>
-                  <p>
-                    {article.categorie} -{" "}
-                    <span>{getFormattedDate(article.createdAt)}</span>
-                  </p>
-                  <a href={`/article/${article.id}`}>{article.title}</a>
-                </div>
-              ))}
-            </div>
           </div>
 
-          <Abonner></Abonner>
           <Categorie
-            categorie="Ingénierie"
+            categorie="PROF DE L'ÉDITION "
             articles={articles.filter(
               (article) => article.categorie == "ingénierie"
             )}
           ></Categorie>
           <Categorie
-            categorie="Culture"
+            categorie="ALUMINI DE L'ÉDITION "
             articles={articles.filter(
               (article) => article.categorie == "culture"
             )}
           ></Categorie>
+          <Abonner></Abonner>
         </Layout>
       )}
     </div>

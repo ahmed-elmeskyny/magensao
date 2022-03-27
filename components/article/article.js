@@ -14,7 +14,7 @@ const Article = ({ title, author, categorie, article, createdAt, img }) => {
       <p className={styles.writer}>
         Publié le {getFormattedDate(createdAt)} , {author}
       </p>
-      {/* <img src={img}></img> */}
+      <img src={img}></img>
       <p className={styles.article}>{parse(`${article}`)}</p>
     </div>
   );

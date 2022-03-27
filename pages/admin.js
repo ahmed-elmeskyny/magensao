@@ -76,6 +76,7 @@ export default function Home() {
             ...data,
             article: value,
             img: url,
+            archive: true,
             createdAt: new Date().getTime(),
           });
         });
@@ -153,9 +154,9 @@ export default function Home() {
                           required: "Ce champ est obligatoire",
                         })}
                       >
-                        <option value="slider">slider</option>
-                        <option value="top">top articles</option>
-                        <option value="essentiel">essentiel</option>
+                        <option value="slider">edito</option>
+                        <option value="top">alaune</option>
+                        <option value="essentiel">top</option>
                         <option value="autre">autre</option>
                       </select>
                     </td>
@@ -175,6 +176,8 @@ export default function Home() {
                         <option value="ingénierie">ingénierie</option>
                         <option value="culture">culture</option>
                         <option value="sport">sport</option>
+                        <option value="prof">prof edition</option>
+                        <option value="alumini">alumini edition</option>
                       </select>
                     </td>
                   </tr>
@@ -187,10 +190,8 @@ export default function Home() {
                       {" "}
                       <input
                         type="text"
-                        placeholder=" ..... s'il appartient au slider"
-                        {...register("slug", {
-                          required: "Ce champ est obligatoire",
-                        })}
+                        placeholder=" ..... s'il appartient au edito/alaune"
+                        {...register("slug")}
                       ></input>
                     </td>
                     <td>

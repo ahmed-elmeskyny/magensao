@@ -38,9 +38,9 @@ const Footer = ({ toggle, setToggle }) => {
               Abonnement
             </a>
           </li>
-          <li>
+          {/* <li>
             <a href="/apropos">A propos de MagEnsao</a>
-          </li>
+          </li> */}
           {/* <li>
             <a href="#"></a>
           </li> */}
@@ -63,7 +63,7 @@ const Footer = ({ toggle, setToggle }) => {
             </a>
           </li>
           <li className={styles.special}>
-            <a href="https://alensao.com/emission" target="_blank">
+            <a href="/klam2">
               {" "}
               <img src="/klam.png" width="150px"></img>
             </a>

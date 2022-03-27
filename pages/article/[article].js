@@ -32,9 +32,6 @@ export default function Blog() {
     setLoader(false);
   }, [article]);
 
-  console.log(article);
-  console.log(articleData);
-
   return (
     <div>
       {loader ? (
