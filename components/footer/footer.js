@@ -5,6 +5,8 @@ import styles from "./footer.module.scss";
 import { RiFacebookBoxFill, RiInstagramFill } from "react-icons/ri";
 import { MdEmail } from "react-icons/md";
 
+import Link from "next/link";
+
 const Footer = ({ toggle, setToggle }) => {
   return (
     <div className={styles.footerContainer}>
@@ -45,12 +47,12 @@ const Footer = ({ toggle, setToggle }) => {
             <a href="#"></a>
           </li> */}
           <li>
-            <a href="https://alensao.com/" target="_blank">
+            <a href="https://alensao.com/" target="_blank" rel="noreferrer">
               Alensao
             </a>
           </li>
           <li>
-            <a href="/contact">Contact</a>
+            <Link href="/contact">Contact</Link>
           </li>
         </ul>
       </div>
@@ -58,14 +60,18 @@ const Footer = ({ toggle, setToggle }) => {
         <ul>
           <li className={styles.special}>
             <img src="/alensao.png" width="40px"></img>
-            <a href="https://alensao.com/" target="_blank">
+            <a href="https://alensao.com/" target="_blank" rel="noreferrer">
               alensao
             </a>
           </li>
 
           <li className={styles.special}>
             <img src="/unicard.png" width="40px"></img>
-            <a href="https://alensao.com/unicard" target="_blank">
+            <a
+              href="https://alensao.com/unicard"
+              target="_blank"
+              rel="noreferrer"
+            >
               unicard
             </a>
           </li>

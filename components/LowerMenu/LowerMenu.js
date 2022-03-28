@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 
 //styles
 import styles from "./LowerMenu.module.scss";
@@ -59,11 +60,10 @@ export default function LowerMenu() {
             <a href="#">Archives</a>
           </ActiveLink>
         </li>
-        <li className={styles.special}>
-          <a href="/klam">
-            {" "}
+        <li>
+          <Link href="/klam" className={styles.special}>
             <img src="/klam.png" width="100px"></img>
-          </a>
+          </Link>
         </li>
       </ul>
     </div>

@@ -23,7 +23,7 @@ export default function Archives() {
         <div style={{ display: "flex" }}>
           <div className={styles.magContainer}>
             {magdb.map((mag) => (
-              <a href={mag.read} target="_blank">
+              <a href={mag.read} target="_blank" rel="noreferrer" key={mag.id}>
                 <div className={styles.mag}>
                   <div
                     className={styles.thumbnail}
@@ -38,6 +38,7 @@ export default function Archives() {
                   <a
                     href={mag.read}
                     target="_blank"
+                    rel="noreferrer"
                     style={{ marginTop: "15px" }}
                   >
                     <img
@@ -50,6 +51,7 @@ export default function Archives() {
                   <a
                     href={mag.pdf}
                     target="_blank"
+                    rel="noreferrer"
                     style={{ marginTop: "10px" }}
                   >
                     <img

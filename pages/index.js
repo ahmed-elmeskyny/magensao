@@ -1,5 +1,5 @@
 import Head from "next/head";
-
+import Link from "next/link";
 //styles
 import styles from "../styles/Home.module.scss";
 import { useState, useEffect } from "react";
@@ -88,9 +88,12 @@ export default function Home() {
                       className={styles.link1}
                       href={`/article/${alaune[0].id}`}
                     >
-                      LIRE L' ARTICLE{" "}
+                      LIRE L'ARTICLE{" "}
                     </a>
-                    <a className={styles.link2} href="/archives">
+                    <a
+                      className={styles.link2}
+                      href={`/article/${alaune[0].Categorie}`}
+                    >
                       TOUS LES ARTICLES LIÉS
                     </a>
                   </div>

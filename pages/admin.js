@@ -97,10 +97,10 @@ export default function Home() {
       </Head>
       <div className={styles.adminPage}>
         <div className={styles.logo}>
-          <img src="/logo.png" width="35px"></img>
+          <img src="/logo1.png" width="35px"></img>
           <p>MagEnsao</p>
         </div>
-        <label>l'Article :</label>
+        <label>l&apos;Article :</label>
         <QuillNoSSRWrapper
           modules={modules}
           formats={formats}
@@ -145,7 +145,7 @@ export default function Home() {
                   </tr>
                   <tr>
                     <td>
-                      <label>placer l'article :</label>
+                      <label>placer l&apos;article :</label>
                     </td>
                     <td>
                       {" "}
@@ -154,9 +154,9 @@ export default function Home() {
                           required: "Ce champ est obligatoire",
                         })}
                       >
-                        <option value="slider">edito</option>
-                        <option value="top">alaune</option>
-                        <option value="essentiel">top</option>
+                        <option value="edito">edito</option>
+                        <option value="alaune">alaune</option>
+                        <option value="top">top</option>
                         <option value="autre">autre</option>
                       </select>
                     </td>
@@ -184,7 +184,7 @@ export default function Home() {
 
                   <tr>
                     <td>
-                      <label>partie de l'article : </label>
+                      <label>partie de l&apos;article : </label>
                     </td>
                     <td>
                       {" "}
@@ -195,7 +195,7 @@ export default function Home() {
                       ></input>
                     </td>
                     <td>
-                      <label>image de l'article :</label>
+                      <label>image de l&apos;article :</label>
                     </td>
                     <td>
                       {" "}

@@ -35,7 +35,7 @@ const Popup = ({ toggle, setToggle }) => {
           <div className={styles.abonn}>
             <h2>
               Inscrivez-vous pour recevoir mensuellement notre magazine
-              "MagEnsao"
+              &quot;MagEnsao&quot;
             </h2>
             <p>
               recevoir les derniers articles et editions directement dans votre

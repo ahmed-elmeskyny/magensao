@@ -30,6 +30,7 @@ $lower-contrast: #f5f6fb;
       border-radius: 15px;
       font-size: 20px;
       font-weight: 600;
+      cursor: pointer;
       @media (max-width: 800px) {
         font-size: 15px;
         padding: 0;
@@ -44,6 +45,7 @@ $lower-contrast: #f5f6fb;
       margin-left: 3 px;
       position: relative;
       margin-left: 5px;
+      cursor: pointer;
       @media (max-width: 800px) {
         padding-right: 10px;
         font-size: 17px;
