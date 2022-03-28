@@ -68,10 +68,10 @@ const Klam = () => {
               <div className={styles.episodes}>
                 {klam.map((episode) => {
                   return (
-                    <div
+                    <a
                       className={styles.episode}
                       key={episode.id}
-                      onClick={() => router.push(`klam/${episode.guest}`)}
+                      href={`klam/${episode.id}`}
                     >
                       <div
                         className={styles.img}
@@ -79,7 +79,7 @@ const Klam = () => {
                       ></div>
                       <p> {episode.episode} </p>
                       <p> {episode.guest}</p>
-                    </div>
+                    </a>
                   );
                 })}
               </div>

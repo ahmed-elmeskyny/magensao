@@ -1,7 +1,7 @@
 //next
 import { useRouter } from "next/router";
-
-//react
+import Head from "next/head";
+//reac
 import { useState, useEffect } from "react";
 
 //style
@@ -34,6 +34,10 @@ export default function Blog() {
 
   return (
     <div>
+      <Head>
+        <title>MAGENSAO || Article </title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       {loader ? (
         <Loader></Loader>
       ) : (
