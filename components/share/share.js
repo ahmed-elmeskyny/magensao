@@ -21,13 +21,13 @@ const Share = () => {
           <input type="email" placeholder="Votre E-mail"></input>
           <button type="submit">inscrivez-vous</button>
           <div className={styles.socialShare}>
-            <span>Share</span>
+            {/* <span>Share</span>
             <a>
               <RiFacebookBoxFill></RiFacebookBoxFill>
             </a>
             <a>
               <RiInstagramFill></RiInstagramFill>
-            </a>
+            </a> */}
           </div>
           <p>Bonne lecture &#128513;</p>
         </div>

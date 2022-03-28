@@ -60,7 +60,7 @@ export default function LowerMenu() {
           </ActiveLink>
         </li>
         <li className={styles.special}>
-          <a href="https://alensao.com/emission" target="_blank">
+          <a href="/klam">
             {" "}
             <img src="/klam.png" width="100px"></img>
           </a>

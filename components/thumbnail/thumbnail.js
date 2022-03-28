@@ -4,17 +4,9 @@ import styles from "./thumbnail.module.scss";
 //utils
 import { getFormattedDate } from "../../config/fire-config";
 
-const Thumbnail = ({ img, categorie, createdAt, title, id, margin }) => {
+const Thumbnail = ({ img, categorie, createdAt, title, id }) => {
   return (
-    <a
-      className={styles.container}
-      href={`/article/${id}`}
-      style={
-        margin
-          ? { marginRight: "0" }
-          : { marginRight: "10px", marginLeft: "10px" }
-      }
-    >
+    <a className={styles.container} href={`/article/${id}`}>
       <img src={img ? img : "/blog.png"}></img>
       <div>
         <p className={styles.date}>

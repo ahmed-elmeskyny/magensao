@@ -17,7 +17,6 @@ $lower-contrast: #f5f6fb;
     left: 0;
     margin-top: 0;
     padding: 10px;
-    padding-top: 10px;
     width: 100%;
     height: 60px;
     background-color: white;
@@ -40,19 +39,18 @@ $lower-contrast: #f5f6fb;
   }
 
   .links {
-    @media (max-width: 800px) {
-      display: none;
-    }
     ul {
       display: flex;
       align-items: center;
       justify-content: center;
       list-style: none;
       font-size: 20px;
+      margin-bottom: 6px;
       li {
         margin-left: 10px;
         margin-right: 10px;
         font-weight: 500;
+
         cursor: pointer;
       }
       .special {
@@ -90,6 +88,9 @@ $lower-contrast: #f5f6fb;
           display: flex;
           align-items: center;
           justify-content: center;
+        }
+        @media (max-width: 800px) {
+          margin-top: 0;
         }
       }
     }

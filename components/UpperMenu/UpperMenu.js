@@ -12,7 +12,7 @@ export default function UpperMenu({ toggle, setToggle }) {
   return (
     <div className={styles.UppermenuContainer}>
       <div className={styles.logo}>
-        <img src="/logo.png" width="35px"></img>
+        <img src="/logo1.png" width="35px"></img>
         <p>MAGENSAO</p>
       </div>
       <div className={styles.links}>

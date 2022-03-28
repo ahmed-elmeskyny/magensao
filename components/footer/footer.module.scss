@@ -45,6 +45,9 @@ $lower-contrast: #f5f6fb;
   .links {
     margin-top: 10px;
     margin-bottom: 10px;
+    // @media (max-width: 800px) {
+    //   display: none;
+    // }
     ul {
       display: flex;
       align-items: center;
@@ -60,8 +63,9 @@ $lower-contrast: #f5f6fb;
         font-weight: 500;
         cursor: pointer;
         @media (max-width: 800px) {
-          width: 115px;
+          width: 90px;
           margin-left: 5px;
+          margin-bottom: 15px;
         }
       }
       .special {

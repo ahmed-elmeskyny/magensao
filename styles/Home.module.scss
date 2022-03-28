@@ -10,6 +10,8 @@ $lower-contrast: #f5f6fb;
   @media (max-width: 800px) {
     margin-top: 50px;
     flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
   }
   .articles {
     border-top: 2px solid #0f94b8;
@@ -20,6 +22,7 @@ $lower-contrast: #f5f6fb;
       width: 100%;
       margin-bottom: 30px;
     }
+
     .title {
       // text-align: center;
       padding-left: 10px;

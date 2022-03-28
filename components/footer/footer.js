@@ -62,12 +62,7 @@ const Footer = ({ toggle, setToggle }) => {
               alensao
             </a>
           </li>
-          <li className={styles.special}>
-            <a href="/klam2">
-              {" "}
-              <img src="/klam.png" width="150px"></img>
-            </a>
-          </li>
+
           <li className={styles.special}>
             <img src="/unicard.png" width="40px"></img>
             <a href="https://alensao.com/unicard" target="_blank">
@@ -78,7 +73,7 @@ const Footer = ({ toggle, setToggle }) => {
       </div>
 
       <div className={styles.logo}>
-        <img src="/logo.png" width="50px"></img>
+        <img src="/logo1.png" width="50px"></img>
         <p>MagEnsao</p>
       </div>
       <p className={styles.creator}>

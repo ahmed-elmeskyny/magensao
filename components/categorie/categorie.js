@@ -32,7 +32,7 @@ const Categorie = ({ categorie, articles }) => {
       </div>{" "}
       <ScrollContainer
         className={styles.blogs}
-        style={width < breakpoint ? { width: width } : { width: "100%" }}
+        style={width < breakpoint ? { width: width - 15 } : { width: "100%" }}
         vertical="flase"
         horizontal="True"
         nativeMobileScroll="True"
