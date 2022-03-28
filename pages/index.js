@@ -88,7 +88,7 @@ export default function Home() {
                       className={styles.link1}
                       href={`/article/${alaune[0].id}`}
                     >
-                      LIRE L'ARTICLE{" "}
+                      LIRE L&apos;ARTICLE{" "}
                     </a>
                     <a
                       className={styles.link2}

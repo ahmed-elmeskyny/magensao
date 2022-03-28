@@ -55,9 +55,9 @@ const Klam = () => {
                   Sciences Appliquées d&apos;Oujda, il est de notre devoir
                   d&apos;être instruits et conscients des situations sociales et
                   économiques de la région, et du Royaume. C&apos;est dans ce
-                  cadre que nous avons lancé une émission nommée "K-LAM 2.0".
-                  Son but étant d&apos;inviter des personnalités de haut
-                  calibre, afin de dialoguer avec eux sur des points
+                  cadre que nous avons lancé une émission nommée &quot;K-LAM
+                  2.0&quot;. Son but étant d&apos;inviter des personnalités de
+                  haut calibre, afin de dialoguer avec eux sur des points
                   socio-économiques qui intéressent le développement de notre
                   pays.
                 </p>
