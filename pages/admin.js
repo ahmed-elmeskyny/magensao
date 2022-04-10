@@ -65,7 +65,7 @@ export default function Home() {
   const onSubmit = (data) => {
     setLoader(true);
     console.log(loader);
-    reset("");
+
     try {
       const storage = getStorage();
       const imgRef = ref(storage, data.img[0].name);
