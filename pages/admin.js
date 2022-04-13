@@ -156,8 +156,11 @@ export default function Home() {
                         <option value="edito">edito</option>
                         <option value="rubrique">rubrique</option>
                         <option value="alaune">A la une</option>
-                        <option value="prof"> prof de l'edition</option>
-                        <option value="alumini"> alumini de l'edition</option>
+                        <option value="prof"> prof de l&apos;edition</option>
+                        <option value="alumini">
+                          {" "}
+                          alumini de l&apos;edition
+                        </option>
                         <option value="autre">autre</option>
                       </select>
                     </td>
