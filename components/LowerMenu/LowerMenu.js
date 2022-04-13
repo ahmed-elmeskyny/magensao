@@ -1,12 +1,29 @@
 import Head from "next/head";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 //styles
 import styles from "./LowerMenu.module.scss";
 
+//firebase
+import { fire } from "../../config/fire-config";
+import { collection, onSnapshot } from "firebase/firestore";
+
 //component
 import ActiveLink from "../ActiveLink/ActiveLink";
+
 export default function LowerMenu() {
+  const [rubrique, setRubrique] = useState([]);
+  useEffect(() => {
+    onSnapshot(collection(fire, "avril2022"), (snapshot) => {
+      setRubrique(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+    });
+  }, []);
+
+  const rubrique1 = rubrique.filter(
+    (article) => article.position == "rubrique"
+  );
+  console.log(rubrique1);
   return (
     <div className={styles.LowermenuContainer}>
       <ul>
@@ -15,7 +32,17 @@ export default function LowerMenu() {
             <a>Accueil</a>
           </ActiveLink>
         </li>
-        <li>
+        {rubrique1.map((rub) => (
+          <li key={rub.id}>
+            <ActiveLink
+              href={`/article/${rub.id}`}
+              activeClassName={styles.activeLink}
+            >
+              <a>{rub.categorie}</a>
+            </ActiveLink>
+          </li>
+        ))}
+        {/* <li>
           <ActiveLink href="/coronavirus" activeClassName={styles.activeLink}>
             <a href="#">Coronavirus</a>
           </ActiveLink>
@@ -54,7 +81,7 @@ export default function LowerMenu() {
           <ActiveLink href="/societe" activeClassName={styles.activeLink}>
             <a href="#">Société</a>
           </ActiveLink>
-        </li>
+        </li> */}
         <li>
           <ActiveLink href="/archives" activeClassName={styles.activeLink}>
             <a href="#">Archives</a>

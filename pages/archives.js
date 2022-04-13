@@ -65,7 +65,6 @@ export default function Archives() {
               </a>
             ))}
           </div>
-          <Share></Share>
         </div>
         <Abonn></Abonn>
       </Layout>

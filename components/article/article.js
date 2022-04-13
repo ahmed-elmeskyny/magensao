@@ -7,7 +7,7 @@ import styles from "./article.module.scss";
 //utils
 import { getFormattedDate } from "../../config/fire-config";
 
-const Article = ({ title, author, categorie, article, createdAt, img }) => {
+const Article = ({ title, author, article, createdAt, img }) => {
   return (
     <div className={styles.articleContainer}>
       <h1 className={styles.title}> {title}</h1>
@@ -15,7 +15,7 @@ const Article = ({ title, author, categorie, article, createdAt, img }) => {
         Publié le {getFormattedDate(createdAt)} , {author}
       </p>
       <img src={img}></img>
-      <p className={styles.article}>{parse(`${article}`)}</p>
+      <div className={styles.article}>{parse(`${article}`)}</div>
     </div>
   );
 };

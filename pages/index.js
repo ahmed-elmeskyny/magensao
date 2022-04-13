@@ -13,46 +13,23 @@ import Categorie from "../components/categorie/categorie";
 import Loader from "../components/loader/loader";
 
 //firebase
-import { fire, storage, getFormattedDate } from "../config/fire-config";
+import { fire, getFormattedDate } from "../config/fire-config";
 import { collection, onSnapshot } from "firebase/firestore";
 
 export default function Home() {
   const [articles, setarticles] = useState([]);
   useEffect(() => {
-    onSnapshot(collection(fire, "articles"), (snapshot) => {
+    onSnapshot(collection(fire, "avril2022"), (snapshot) => {
       setarticles(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
     });
   }, []);
-  console.log(articles);
 
-  const sliderArticles = articles.filter(
-    (article) => article.position == "slider"
-  );
-  sliderArticles.sort((a, b) => {
-    return b.createdAt - a.createdAt;
-  });
-
-  const TopArticles = articles.filter((article) => article.position == "top");
-  TopArticles.sort((a, b) => {
-    return b.createdAt - a.createdAt;
-  });
-
-  const essentielArticles = articles.filter(
-    (article) => article.position == "essentiel"
-  );
-  essentielArticles.sort((a, b) => {
-    return b.createdAt - a.createdAt;
-  });
+  const autre = articles.filter((article) => article.position == "autre");
 
   const alaune = articles.filter((article) => article.position == "alaune");
-  alaune.sort((a, b) => {
-    return b.createdAt - a.createdAt;
-  });
+
   const edito = articles.filter((article) => article.position == "edito");
-  edito.sort((a, b) => {
-    return b.createdAt - a.createdAt;
-  });
-  console.log(edito);
+
   return (
     <div style={{ width: "100%" }}>
       <Head>
@@ -110,7 +87,7 @@ export default function Home() {
                   justifyContent: "center",
                 }}
               >
-                {TopArticles.map(
+                {autre.map(
                   (article, idx) =>
                     idx < 6 && (
                       <Thumbnail

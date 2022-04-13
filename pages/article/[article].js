@@ -26,7 +26,7 @@ export default function Blog() {
   const { article } = router.query;
 
   useEffect(async () => {
-    const docRef = doc(fire, "articles", `${article}`);
+    const docRef = doc(fire, "avril2022", `${article}`);
     const docSnap = await getDoc(docRef);
     setArticle(docSnap.data());
     setLoader(false);
@@ -44,7 +44,6 @@ export default function Blog() {
         <Layout>
           <div style={{ display: "flex" }}>
             <Article {...articleData}></Article>
-            <Share></Share>
           </div>
         </Layout>
       )}

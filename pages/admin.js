@@ -72,11 +72,10 @@ export default function Home() {
       uploadBytes(imgRef, data.img[0]).then((snapshot) => {
         console.log("Uploaded a blob or file!");
         getDownloadURL(imgRef).then(async (url) => {
-          const docRef = await addDoc(collection(fire, "articles"), {
+          const docRef = await addDoc(collection(fire, `${data.edition}`), {
             ...data,
             article: value,
             img: url,
-            archive: true,
             createdAt: new Date().getTime(),
           });
         });
@@ -155,8 +154,10 @@ export default function Home() {
                         })}
                       >
                         <option value="edito">edito</option>
-                        <option value="alaune">alaune</option>
-                        <option value="top">top</option>
+                        <option value="rubrique">rubrique</option>
+                        <option value="alaune">A la une</option>
+                        <option value="prof"> prof de l'edition</option>
+                        <option value="alumini"> alumini de l'edition</option>
                         <option value="autre">autre</option>
                       </select>
                     </td>
@@ -165,20 +166,13 @@ export default function Home() {
                     </td>
                     <td>
                       {" "}
-                      <select
+                      <input
+                        type="text"
+                        placeholder="entrez la categorie"
                         {...register("categorie", {
                           required: "Ce champ est obligatoire",
                         })}
-                      >
-                        <option value="coronavirus">coronavirus</option>
-                        <option value="politique">politique</option>
-                        <option value="economie">economie</option>
-                        <option value="ingénierie">ingénierie</option>
-                        <option value="culture">culture</option>
-                        <option value="sport">sport</option>
-                        <option value="prof">prof edition</option>
-                        <option value="alumini">alumini edition</option>
-                      </select>
+                      ></input>
                     </td>
                   </tr>
 
@@ -195,7 +189,7 @@ export default function Home() {
                       ></input>
                     </td>
                     <td>
-                      <label>image de l&apos;article :</label>
+                      <label>image de l&apos;auteur :</label>
                     </td>
                     <td>
                       {" "}
@@ -203,6 +197,20 @@ export default function Home() {
                         type="file"
                         placeholder="entrez l'image"
                         {...register("img", {
+                          required: "Ce champ est obligatoire",
+                        })}
+                      ></input>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label>Edition : </label>
+                    </td>
+                    <td>
+                      <input
+                        type="text"
+                        placeholder="ex:  avril2021 / mars2022"
+                        {...register("edition", {
                           required: "Ce champ est obligatoire",
                         })}
                       ></input>
