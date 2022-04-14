@@ -1,7 +1,7 @@
 import Head from "next/head";
 
 import styles from "../styles/archive.module.scss";
-
+import Link from "next/link";
 //components
 import Layout from "../components/Layout/layout";
 import Share from "../components/share/share";
@@ -20,7 +20,16 @@ export default function Archives() {
       </Head>
 
       <Layout>
-        <div style={{ display: "flex" }}>
+        <div className={styles.archiveContainer}>
+          <h2> nouvelles editions</h2>
+          <div className={styles.editions}>
+            <div className={styles.edition}>
+              <Link href="#">
+                <p>Avril 2022</p>
+              </Link>
+            </div>
+          </div>
+          <h2>anciennes editons</h2>
           <div className={styles.magContainer}>
             {magdb.map((mag) => (
               <a href={mag.read} target="_blank" rel="noreferrer" key={mag.id}>

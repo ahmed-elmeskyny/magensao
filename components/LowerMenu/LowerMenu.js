@@ -23,7 +23,7 @@ export default function LowerMenu() {
   const rubrique1 = rubrique.filter(
     (article) => article.position == "rubrique"
   );
-  console.log(rubrique1);
+
   return (
     <div className={styles.LowermenuContainer}>
       <ul>

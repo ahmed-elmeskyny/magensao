@@ -44,7 +44,7 @@ export default function Home() {
         <Layout>
           {/* <Slider articles={sliderArticles}></Slider> */}
           <Edito article={edito[0]}></Edito>
-          <div className={styles.topArticles}>
+          {/* <div className={styles.topArticles}>
             <div className={styles.articles}>
               <h2 className={styles.une}>A LA UNE </h2>
 
@@ -99,9 +99,9 @@ export default function Home() {
                 )}
               </div>
             </div>
-          </div>
+          </div> */}
 
-          <Categorie
+          {/* <Categorie
             categorie="PROF DE L'ÉDITION "
             articles={articles.filter(
               (article) => article.categorie == "ingénierie"
@@ -112,7 +112,7 @@ export default function Home() {
             articles={articles.filter(
               (article) => article.categorie == "culture"
             )}
-          ></Categorie>
+          ></Categorie> */}
           {/* <Abonner></Abonner> */}
         </Layout>
       )}

@@ -19,7 +19,7 @@ const properties = {
 const Edito = ({ article }) => {
   return (
     <div className={styles.wrapper}>
-      <span className={styles.title}>EDITORIAL : </span>
+      <span className={styles.title}>EDITORIAL </span>
       <div className={styles.editoContainer}>
         <div
           className={styles.imgContainer}
@@ -29,7 +29,7 @@ const Edito = ({ article }) => {
         </div>
         <div className={styles.edito}>
           <span>{article.author}</span>
-          <h1>{article.title}</h1>
+          {/* <h1>{article.title}</h1> */}
           <p>{article.slug} ....</p>
           <div className={styles.Links}>
             <a className={styles.link2} href={`/article/${article.id}`}>
