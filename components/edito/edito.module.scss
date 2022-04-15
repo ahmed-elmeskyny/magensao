@@ -17,6 +17,7 @@ $lower-contrast: #f5f6fb;
   .editoContainer {
     margin-top: 10px;
     display: flex;
+
     @media (max-width: 800px) {
       margin-top: 100px;
       flex-direction: column;
@@ -25,6 +26,7 @@ $lower-contrast: #f5f6fb;
     .imgContainer {
       border-radius: 5px;
       width: 400px;
+      height: 250px;
       background-size: cover;
       @media (max-width: 800px) {
         width: 100%;

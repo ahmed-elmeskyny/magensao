@@ -218,6 +218,18 @@ export default function Home() {
                         })}
                       ></input>
                     </td>
+                    <td>
+                      <label>Domaine : </label>
+                    </td>
+                    <td>
+                      <input
+                        type="text"
+                        placeholder="Prof..."
+                        {...register("domaine", {
+                          required: "Ce champ est obligatoire",
+                        })}
+                      ></input>
+                    </td>
                   </tr>
                 </tbody>
               </table>
