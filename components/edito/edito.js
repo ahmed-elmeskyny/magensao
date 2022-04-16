@@ -28,7 +28,9 @@ const Edito = ({ article }) => {
           {/* <img src={article.img}></img> */}
         </div>
         <div className={styles.edito}>
-          <span>{article.author}</span>
+          <h1>
+            {article.author}, {article.domaine}
+          </h1>
           {/* <h1>{article.title}</h1> */}
           <p>{article.slug} ....</p>
           <div className={styles.Links}>
