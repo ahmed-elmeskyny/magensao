@@ -25,10 +25,10 @@ export default function Home() {
   }, []);
 
   const autre = articles.filter((article) => article.position == "autre");
-
   const alaune = articles.filter((article) => article.position == "alaune");
-
   const edito = articles.filter((article) => article.position == "edito");
+  const prof = articles.filter((article) => article.position == "prof");
+  const alumini = articles.filter((article) => article.position == "alumini");
 
   return (
     <div style={{ width: "100%" }}>
@@ -44,7 +44,7 @@ export default function Home() {
         <Layout>
           {/* <Slider articles={sliderArticles}></Slider> */}
           <Edito article={edito[0]}></Edito>
-          {/* <div className={styles.topArticles}>
+          <div className={styles.topArticles}>
             <div className={styles.articles}>
               <h2 className={styles.une}>A LA UNE </h2>
 
@@ -67,12 +67,12 @@ export default function Home() {
                     >
                       LIRE L&apos;ARTICLE{" "}
                     </a>
-                    <a
+                    {/* <a
                       className={styles.link2}
                       href={`/article/${alaune[0].Categorie}`}
                     >
                       TOUS LES ARTICLES LIÉS
-                    </a>
+                    </a> */}
                   </div>
                 </div>
               </div>
@@ -99,21 +99,10 @@ export default function Home() {
                 )}
               </div>
             </div>
-          </div> */}
+          </div>
 
-          {/* <Categorie
-            categorie="PROF DE L'ÉDITION "
-            articles={articles.filter(
-              (article) => article.categorie == "ingénierie"
-            )}
-          ></Categorie>
-          <Categorie
-            categorie="ALUMINI DE L'ÉDITION "
-            articles={articles.filter(
-              (article) => article.categorie == "culture"
-            )}
-          ></Categorie> */}
-          {/* <Abonner></Abonner> */}
+          <Categorie prof={prof[0]} alumini={alumini[0]}></Categorie>
+          <Abonner></Abonner>
         </Layout>
       )}
     </div>

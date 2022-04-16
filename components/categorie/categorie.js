@@ -8,86 +8,39 @@ import styles from "./categorie.module.scss";
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
 import Thumbnail from "../thumbnail/thumbnail";
 
-const Categorie = ({ categorie, articles }) => {
-  articles.sort((a, b) => {
-    return b.createdAt - a.createdAt;
-  });
-  const [width, setWidth] = useState(window.innerWidth);
-  const breakpoint = 800;
-
-  useEffect(() => {
-    window.addEventListener("resize", () => setWidth(window.innerWidth));
-  }, []);
-
+const Categorie = ({ prof, alumini }) => {
   return (
     <div className={styles.categorieContainer}>
       <div className={styles.categorie}>
-        <h2>{categorie}</h2>
-        <a href={`/${categorie}`}>
-          Voir les articles liés{" "}
-          <BsFillArrowRightCircleFill
-            style={{ marginLeft: "10px" }}
-          ></BsFillArrowRightCircleFill>
-        </a>
+        <h1>PROF DE L'ÉDITION</h1>
+        <div
+          className={styles.img}
+          style={{ backgroundImage: `url(${prof.img})` }}
+        ></div>
+        {/* <img src={prof.img}></img> */}
+        <h2>{prof.title}</h2>
+        <p>{prof.slug}...</p>
+        <div className={styles.Links}>
+          <a className={styles.link2} href={`/article/${prof.id}`}>
+            LIRE LE QUESTIONNAIRE{" "}
+          </a>
+        </div>
       </div>{" "}
-      <ScrollContainer
-        className={styles.blogs}
-        style={width < breakpoint ? { width: width - 15 } : { width: "100%" }}
-        vertical="flase"
-        horizontal="True"
-        nativeMobileScroll="True"
-      >
-        {articles.map(
-          (article, idx) =>
-            idx < 7 && (
-              <Thumbnail
-                img="/blog.png"
-                key={article.id}
-                {...article}
-              ></Thumbnail>
-            )
-        )}
-        {articles.map(
-          (article, idx) =>
-            idx < 7 && (
-              <Thumbnail
-                img="/blog.png"
-                key={article.id}
-                {...article}
-              ></Thumbnail>
-            )
-        )}
-        {articles.map(
-          (article, idx) =>
-            idx < 7 && (
-              <Thumbnail
-                img="/blog.png"
-                key={article.id}
-                {...article}
-              ></Thumbnail>
-            )
-        )}
-        {articles.map(
-          (article, idx) =>
-            idx < 7 && (
-              <Thumbnail
-                img="/blog.png"
-                key={article.id}
-                {...article}
-              ></Thumbnail>
-            )
-        )}
-        {articles.map(
-          (article, idx) =>
-            idx < 7 && (
-              <Thumbnail
-                img="/blog.png"
-                key={article.id}
-                {...article}
-              ></Thumbnail>
-            )
-        )}
-      </ScrollContainer>
+      <div className={styles.categorie}>
+        <h1>ALUMINI DE L'ÉDITION</h1>
+        {/* <img src={alumini.img}></img> */}
+        <div
+          className={styles.img}
+          style={{ backgroundImage: `url(${alumini.img})` }}
+        ></div>
+        <h2>{alumini.title}</h2>
+        <p>{alumini.slug}...</p>
+        <div className={styles.Links}>
+          <a className={styles.link2} href={`/article/${alumini.id}`}>
+            LIRE LE QUESTIONNAIRE{" "}
+          </a>
+        </div>
+      </div>
     </div>
   );
 };
