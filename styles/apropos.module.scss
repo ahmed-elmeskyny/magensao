@@ -112,6 +112,9 @@ $lower-contrast: #f5f6fb;
 }
 
 .tree {
+  @media (max-width: 800px) {
+    margin-top: 125px;
+  }
   .profile {
     margin-top: 15px;
     display: flex;
