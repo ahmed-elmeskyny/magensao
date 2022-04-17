@@ -45,8 +45,8 @@ export default function Home() {
           {/* <Slider articles={sliderArticles}></Slider> */}
           <div className={styles.edition}>
             <p>
-              <span>&laquo;</span> le magazine de l'ingénieur par excellence{" "}
-              <span>&raquo;</span>
+              <span>&laquo;</span> le magazine de l&apos;ingénieur par
+              excellence <span>&raquo;</span>
             </p>
           </div>
           <Edito article={edito[0]}></Edito>

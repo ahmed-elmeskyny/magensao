@@ -12,7 +12,7 @@ const Categorie = ({ prof, alumini }) => {
   return (
     <div className={styles.categorieContainer}>
       <div className={styles.categorie}>
-        <h1>PROFESSEUR DE L'ÉDITION</h1>
+        <h1>PROFESSEUR DE L&apos;ÉDITION</h1>
         <div
           className={styles.img}
           style={{ backgroundImage: `url(${prof.img})` }}
@@ -27,7 +27,7 @@ const Categorie = ({ prof, alumini }) => {
         </div>
       </div>{" "}
       <div className={styles.categorie}>
-        <h1>ALUMINI DE L'ÉDITION</h1>
+        <h1>ALUMINI DE L&apos;ÉDITION</h1>
         {/* <img src={alumini.img}></img> */}
         <div
           className={styles.img}

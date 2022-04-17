@@ -17,7 +17,7 @@ export default function UpperMenu({ toggle, setToggle }) {
       </div>
       <div className={styles.edition}>
         <p>
-          <span>&laquo;</span> le magazine de l'ingénieur par excellence{" "}
+          <span>&laquo;</span> le magazine de l&apos;ingénieur par excellence{" "}
           <span>&raquo;</span>
         </p>
       </div>
