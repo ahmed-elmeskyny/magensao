@@ -92,6 +92,11 @@ export default function LowerMenu() {
             <img src="/klam.png" width="100px"></img>
           </Link>
         </li>
+        <li>
+          <ActiveLink href="/team" activeClassName={styles.activeLink}>
+            <a href="#">Team MagEnsao</a>
+          </ActiveLink>
+        </li>
       </ul>
     </div>
   );

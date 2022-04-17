@@ -4,6 +4,20 @@ $main-text-color: #30495d;
 $second-text-color: #79809a;
 $lower-contrast: #f5f6fb;
 
+.edition {
+  font-family: "Fredoka One", cursive;
+  font-weight: 900;
+  font-size: 25px;
+  margin-bottom: 5px;
+  margin-top: 130px;
+  text-align: center;
+
+  span {
+    color: #0f94b8;
+  }
+  @media (max-width: 800px) {
+  }
+}
 .topArticles {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -97,7 +111,7 @@ $lower-contrast: #f5f6fb;
         .uneSpan {
           color: $second-text-color;
           font-weight: 900;
-          margin-bottom: 30px;
+          // margin-bottom: 30px;
           @media (max-width: 800px) {
             margin: 0;
             margin-top: 10px;

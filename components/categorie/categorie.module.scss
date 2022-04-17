@@ -7,9 +7,14 @@ $lower-contrast: #f5f6fb;
 .categorieContainer {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+
   .categorie {
     width: 500px;
     margin-bottom: 50px;
+    @media (max-width: 800px) {
+      width: 100%;
+    }
     h1 {
       color: #0f94b8;
       font-weight: 600;
@@ -27,6 +32,9 @@ $lower-contrast: #f5f6fb;
       border-radius: 5px;
       background-size: cover;
       margin-bottom: 15px;
+      @media (max-width: 800px) {
+        background-position: center;
+      }
     }
     h2 {
       font-size: 32px;

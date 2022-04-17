@@ -5,6 +5,9 @@ $second-text-color: #79809a;
 $lower-contrast: #f5f6fb;
 
 .archiveContainer {
+  @media (max-width: 800px) {
+    margin-top: 125px;
+  }
   h2 {
     text-transform: uppercase;
     margin-bottom: 20px;
@@ -12,6 +15,10 @@ $lower-contrast: #f5f6fb;
     margin-left: 15px;
     border-bottom: 5px #30495d solid;
     width: 30%;
+    @media (max-width: 800px) {
+      width: 100%;
+      margin: 0;
+    }
   }
 
   .editions {

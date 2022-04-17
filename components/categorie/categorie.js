@@ -12,7 +12,7 @@ const Categorie = ({ prof, alumini }) => {
   return (
     <div className={styles.categorieContainer}>
       <div className={styles.categorie}>
-        <h1>PROF DE L'ÉDITION</h1>
+        <h1>PROFESSEUR DE L'ÉDITION</h1>
         <div
           className={styles.img}
           style={{ backgroundImage: `url(${prof.img})` }}

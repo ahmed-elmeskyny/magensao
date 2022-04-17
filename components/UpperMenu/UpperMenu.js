@@ -15,9 +15,12 @@ export default function UpperMenu({ toggle, setToggle }) {
         <img src="/logo1.png" width="35px"></img>
         <p>MAGENSAO</p>
       </div>
-      {/* <div className={styles.edition}>
-        <p>dd,d,d,,</p>
-      </div> */}
+      <div className={styles.edition}>
+        <p>
+          <span>&laquo;</span> le magazine de l'ingénieur par excellence{" "}
+          <span>&raquo;</span>
+        </p>
+      </div>
       <div className={styles.links}>
         <ul>
           <li className={styles.icon}>

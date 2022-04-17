@@ -4,6 +4,7 @@ $main-text-color: #30495d;
 $second-text-color: #79809a;
 $lower-contrast: #f5f6fb;
 
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
 .UppermenuContainer {
   height: 40px;
   margin-top: 20px;
@@ -23,6 +24,18 @@ $lower-contrast: #f5f6fb;
     z-index: 10000;
   }
 
+  .edition {
+    font-family: "Fredoka One", cursive;
+    font-weight: 900;
+    font-size: 25px;
+    margin-bottom: 5px;
+    span {
+      color: #0f94b8;
+    }
+    @media (max-width: 800px) {
+      display: none;
+    }
+  }
   .logo {
     display: flex;
     align-items: center;

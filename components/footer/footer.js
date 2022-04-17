@@ -48,7 +48,7 @@ const Footer = ({ toggle, setToggle }) => {
           </li> */}
           <li>
             <a href="https://alensao.com/" target="_blank" rel="noreferrer">
-              Alensao
+              Alensao.com
             </a>
           </li>
           <li>
@@ -56,16 +56,21 @@ const Footer = ({ toggle, setToggle }) => {
           </li>
         </ul>
       </div>
-      <div className={styles.links}>
-        <ul>
+      {/* <div className={styles.links}> */}
+      {/* <ul>
           <li className={styles.special}>
             <img src="/alensao.png" width="40px"></img>
             <a href="https://alensao.com/" target="_blank" rel="noreferrer">
               alensao
             </a>
           </li>
+          <li>
+            <Link href="/klam" className={styles.special}>
+              <img src="/klam.png" width="100px"></img>
+            </Link>
+          </li> */}
 
-          <li className={styles.special}>
+      {/* <li className={styles.special}>
             <img src="/unicard.png" width="40px"></img>
             <a
               href="https://alensao.com/unicard"
@@ -74,16 +79,16 @@ const Footer = ({ toggle, setToggle }) => {
             >
               unicard
             </a>
-          </li>
-        </ul>
-      </div>
+          </li> */}
+      {/* </ul> */}
+      {/* </div> */}
 
       <div className={styles.logo}>
         <img src="/logo1.png" width="50px"></img>
         <p>MagEnsao</p>
       </div>
       <p className={styles.creator}>
-        by <a>Ahmed El meskyny</a>
+        by <a>Ahmed El Meskyny</a>
       </p>
     </div>
   );

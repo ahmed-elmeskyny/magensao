@@ -43,6 +43,12 @@ export default function Home() {
       ) : (
         <Layout>
           {/* <Slider articles={sliderArticles}></Slider> */}
+          <div className={styles.edition}>
+            <p>
+              <span>&laquo;</span> le magazine de l'ingénieur par excellence{" "}
+              <span>&raquo;</span>
+            </p>
+          </div>
           <Edito article={edito[0]}></Edito>
           <div className={styles.topArticles}>
             <div className={styles.articles}>
@@ -55,8 +61,8 @@ export default function Home() {
                 ></div>
                 <div className={styles.description}>
                   <p className={styles.uneSpan}>
-                    {alaune[0].categorie},{" "}
-                    {getFormattedDate(alaune[0].createdAt)}
+                    {alaune[0].categorie}
+                    {/* {getFormattedDate(alaune[0].createdAt)}*/}
                   </p>
                   <h1>{alaune[0].title}</h1>
                   <p>{alaune[0].slug}.....</p>

@@ -5,6 +5,7 @@ $second-text-color: #79809a;
 $lower-contrast: #f5f6fb;
 
 .wrapper {
+  padding-bottom: 30px;
   .title {
     color: #0f94b8;
     font-weight: 700;
@@ -12,7 +13,7 @@ $lower-contrast: #f5f6fb;
     margin-left: 5px;
   }
   @media (max-width: 800px) {
-    margin-top: 105px;
+    margin-top: 25px;
   }
   .editoContainer {
     margin-top: 10px;
@@ -44,7 +45,6 @@ $lower-contrast: #f5f6fb;
       @media (max-width: 800px) {
         width: 100%;
         margin: 0;
-        margin-top: -25px;
       }
       span {
         color: $second-text-color;

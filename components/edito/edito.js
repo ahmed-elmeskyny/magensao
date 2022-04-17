@@ -6,16 +6,6 @@ import { useState, useEffect } from "react";
 import "react-slideshow-image/dist/styles.css";
 import styles from "./edito.module.scss";
 
-import { getFormattedDate } from "../../config/fire-config";
-
-import { magdb } from "../../db/mag";
-
-const properties = {
-  indicators: true,
-  arrows: false,
-  duration: 200000,
-};
-
 const Edito = ({ article }) => {
   return (
     <div className={styles.wrapper}>
