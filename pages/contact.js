@@ -25,7 +25,7 @@ export default function Contact() {
                 <HiOutlineMailOpen className={styles.icon}></HiOutlineMailOpen>
                 <div className={styles.text}>
                   <span>E-mail :</span>
-                  <p>MagEnsao@gmail.com</p>
+                  <a href="mailto:magensao@gmail.com">MagEnsao@gmail.com</a>
                 </div>
               </div>
             </div>
