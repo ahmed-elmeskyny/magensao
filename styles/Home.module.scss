@@ -4,8 +4,19 @@ $main-text-color: #30495d;
 $second-text-color: #79809a;
 $lower-contrast: #f5f6fb;
 
+.fixed {
+  position: fixed;
+  left: -120px;
+  background-color: #30495d;
+  color: white;
+  font-size: 20px;
+  font-weight: 900;
+  transform: rotate(90deg);
+  margin-top: 20px;
+  padding: 5px 10px;
+}
 .edition {
-  font-family: "Fredoka One", cursive;
+  font-family: "Ms Madi", cursive;
   font-weight: 900;
   font-size: 25px;
   margin-bottom: 5px;
@@ -15,7 +26,8 @@ $lower-contrast: #f5f6fb;
   span {
     color: #0f94b8;
   }
-  @media (max-width: 800px) {
+  @media (min-width: 800px) {
+    display: none;
   }
 }
 .topArticles {

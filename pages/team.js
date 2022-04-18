@@ -125,7 +125,7 @@ export default function Archives() {
             <div className={styles.profile}>
               <div
                 className={styles.pdp}
-                style={{ backgroundImage: "url(/president.jpeg)" }}
+                style={{ backgroundImage: "url(/adnane.jpeg)" }}
               ></div>
               <div className={styles.name}>
                 <h5>Adnane EL KHATIB</h5>
@@ -154,7 +154,7 @@ export default function Archives() {
             <div className={styles.profile}>
               <div
                 className={styles.pdp}
-                style={{ backgroundImage: "url(/president.jpeg)" }}
+                style={{ backgroundImage: "url(/youssef.jpeg)" }}
               ></div>
               <div className={styles.name}>
                 <h5>Youssef LBOUR</h5>
@@ -164,7 +164,17 @@ export default function Archives() {
             <div className={styles.profile}>
               <div
                 className={styles.pdp}
-                style={{ backgroundImage: "url(/president.jpeg)" }}
+                style={{ backgroundImage: "url(/ayoub.jpeg)" }}
+              ></div>
+              <div className={styles.name}>
+                <h5>Amina Elkadi</h5>
+                <p>pilotage</p>
+              </div>
+            </div>
+            <div className={styles.profile}>
+              <div
+                className={styles.pdp}
+                style={{ backgroundImage: "url(/octopus.png)" }}
               ></div>
               <div className={styles.name}>
                 <h5>OCTOPUS</h5>
@@ -183,7 +193,7 @@ export default function Archives() {
             <div className={styles.profile}>
               <div
                 className={styles.pdp}
-                style={{ backgroundImage: "url(/president.jpeg)" }}
+                style={{ backgroundImage: "url(/ihab.jpeg)" }}
               ></div>
               <div className={styles.name}>
                 <h5>Ihab BIZIZ</h5>
@@ -194,7 +204,7 @@ export default function Archives() {
             <div className={styles.profile}>
               <div
                 className={styles.pdp}
-                style={{ backgroundImage: "url(/president.jpeg)" }}
+                style={{ backgroundImage: "url(/haytham.jpeg)" }}
               ></div>
               <div className={styles.name}>
                 <h5>Haytham OURYEMCHI </h5>
@@ -214,7 +224,7 @@ export default function Archives() {
             <div className={styles.profile}>
               <div
                 className={styles.pdp}
-                style={{ backgroundImage: "url(/president.jpeg)" }}
+                style={{ backgroundImage: "url(/ayoub.jpeg)" }}
               ></div>
               <div className={styles.name}>
                 <h5>Ayoub BELHAJ</h5>

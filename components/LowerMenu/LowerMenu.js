@@ -42,59 +42,20 @@ export default function LowerMenu() {
             </ActiveLink>
           </li>
         ))}
-        {/* <li>
-          <ActiveLink href="/coronavirus" activeClassName={styles.activeLink}>
-            <a href="#">Coronavirus</a>
-          </ActiveLink>
-        </li>
-        <li>
-          <ActiveLink href="/politique" activeClassName={styles.activeLink}>
-            <a href="#">Politique</a>
-          </ActiveLink>
-        </li>
-        <li>
-          <ActiveLink href="/sport" activeClassName={styles.activeLink}>
-            <a href="#">Sport</a>
-          </ActiveLink>
-        </li>
-        <li>
-          <ActiveLink href="/ensao" activeClassName={styles.activeLink}>
-            <a href="#">Ensao</a>
-          </ActiveLink>
-        </li>
-        <li>
-          <ActiveLink href="/economie" activeClassName={styles.activeLink}>
-            <a href="#">Économie</a>
-          </ActiveLink>
-        </li>
-        <li>
-          <ActiveLink href="ingenierie" activeClassName={styles.activeLink}>
-            <a href="#">Ingénierie</a>
-          </ActiveLink>
-        </li>
-        <li>
-          <ActiveLink href="/culture" activeClassName={styles.activeLink}>
-            <a href="#">Culture</a>
-          </ActiveLink>
-        </li>
-        <li>
-          <ActiveLink href="/societe" activeClassName={styles.activeLink}>
-            <a href="#">Société</a>
-          </ActiveLink>
-        </li> */}
-        <li>
-          <ActiveLink href="/archives" activeClassName={styles.activeLink}>
-            <a href="#">Archives</a>
-          </ActiveLink>
-        </li>
         <li>
           <Link href="/klam" className={styles.special}>
             <img src="/klam.png" width="100px"></img>
           </Link>
         </li>
         <li>
+          <ActiveLink href="/chroniqueurs" activeClassName={styles.activeLink}>
+            <a>Chroniqueurs</a>
+          </ActiveLink>
+        </li>
+
+        <li>
           <ActiveLink href="/team" activeClassName={styles.activeLink}>
-            <a href="#">Team MagEnsao</a>
+            <a href="#">Team </a>
           </ActiveLink>
         </li>
       </ul>
