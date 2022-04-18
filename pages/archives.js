@@ -24,7 +24,7 @@ export default function Archives() {
           <h2> nouvelles editions</h2>
           <div className={styles.editions}>
             <div className={styles.edition}>
-              <Link href="#">
+              <Link href="/edition/avril2022">
                 <p>Avril 2022</p>
               </Link>
             </div>

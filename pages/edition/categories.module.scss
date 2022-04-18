@@ -5,7 +5,7 @@ $second-text-color: #79809a;
 $lower-contrast: #f5f6fb;
 
 .pageContainer {
-  width: 75%;
+  width: 100%;
   margin-right: 20px;
   @media (max-width: 800px) {
     margin-top: 100px;
@@ -13,12 +13,30 @@ $lower-contrast: #f5f6fb;
     margin-right: 0;
     padding: 10px;
   }
+  h3 {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #30495d;
+    margin-left: 15px;
+    border-bottom: 5px #30495d solid;
+    width: 50%;
+    font-size: 32px;
+    margin-top: 30px;
+    @media (max-width: 800px) {
+      width: 100%;
+      margin: 0;
+    }
+  }
   .title {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     color: #30495d;
     margin-bottom: 10px;
+    h1 {
+      text-transform: uppercase;
+    }
+
     @media (max-width: 800px) {
       flex-direction: column;
       width: 100%;
