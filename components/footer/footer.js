@@ -52,36 +52,13 @@ const Footer = ({ toggle, setToggle }) => {
             </a>
           </li>
           <li>
+            <Link href="/archives">Archives</Link>
+          </li>
+          <li>
             <Link href="/contact">Contact</Link>
           </li>
         </ul>
       </div>
-      {/* <div className={styles.links}> */}
-      {/* <ul>
-          <li className={styles.special}>
-            <img src="/alensao.png" width="40px"></img>
-            <a href="https://alensao.com/" target="_blank" rel="noreferrer">
-              alensao
-            </a>
-          </li>
-          <li>
-            <Link href="/klam" className={styles.special}>
-              <img src="/klam.png" width="100px"></img>
-            </Link>
-          </li> */}
-
-      {/* <li className={styles.special}>
-            <img src="/unicard.png" width="40px"></img>
-            <a
-              href="https://alensao.com/unicard"
-              target="_blank"
-              rel="noreferrer"
-            >
-              unicard
-            </a>
-          </li> */}
-      {/* </ul> */}
-      {/* </div> */}
 
       <div className={styles.logo}>
         <img src="/logo1.png" width="50px"></img>
