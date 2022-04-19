@@ -37,7 +37,7 @@ export default function Archives() {
               style={{ backgroundImage: "url(/seraj.jpeg)" }}
             ></div>
             <div className={styles.name}>
-              <h5>Pr Khalid Serra</h5>
+              <h5>Pr Khalid Serraj</h5>
               <p>Doyen de la Faculté de Médecine et de Pharmacie d’Oujda</p>
             </div>
           </div>
