@@ -64,7 +64,7 @@ const Klam = () => {
               </div>
             </div>
             <div className={styles.season}>
-              <h2>2021</h2>
+              {/* <h2>2021</h2> */}
               <div className={styles.episodes}>
                 {klam.map((episode) => {
                   return (
