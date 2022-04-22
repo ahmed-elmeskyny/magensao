@@ -65,7 +65,7 @@ const Footer = ({ toggle, setToggle }) => {
         <p>MagEnsao</p>
       </div>
       <p className={styles.creator}>
-        by <a>Ahmed El Meskyny</a>
+        by <a href="https://ahmedelmeskyny.vercel.app/">Ahmed El Meskyny</a>
       </p>
     </div>
   );

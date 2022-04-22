@@ -37,7 +37,7 @@ export default function Archives() {
               style={{ backgroundImage: "url(/seraj.jpeg)" }}
             ></div>
             <div className={styles.name}>
-              <h5>Pr Khalid Serraj</h5>
+              <h5>Pr. Khalid Serraj</h5>
               <p>Doyen de la Faculté de Médecine et de Pharmacie d’Oujda</p>
             </div>
           </div>
@@ -47,7 +47,7 @@ export default function Archives() {
               style={{ backgroundImage: "url(/haddya.jpeg)" }}
             ></div>
             <div className={styles.name}>
-              <h5>Pr Intissar Haddiya</h5>
+              <h5>Pr. Intissar Haddiya</h5>
               <p>Médecin néphrologue , Professeur de médecine et romancière</p>
             </div>
           </div>
@@ -69,6 +69,76 @@ export default function Archives() {
             <div className={styles.name}>
               <h5>Pr.Ouali Taoufik</h5>
               <p>Professeur physique quantique à université Mohammed Premier</p>
+            </div>
+          </div>
+          <div className={styles.profile}>
+            <div
+              className={styles.pdp}
+              style={{ backgroundImage: "url(/hajji.jpeg)" }}
+            ></div>
+            <div className={styles.name}>
+              <h5>Dr. Jassim HAJJI </h5>
+              <p>President iternational Group of Artificial intelligence</p>
+            </div>
+          </div>
+          <div className={styles.profile}>
+            <div
+              className={styles.pdp}
+              style={{ backgroundImage: "url(/yassmine.jpeg)" }}
+            ></div>
+            <div className={styles.name}>
+              <h5>Yasmine Bouchir</h5>
+              <p>
+                Ingenieur de validation d&apos;architecture EE des vehicules
+              </p>
+            </div>
+          </div>
+          <div className={styles.profile}>
+            <div
+              className={styles.pdp}
+              style={{ backgroundImage: "url(octopus.png)" }}
+            ></div>
+            <div className={styles.name}>
+              <h5>Pr. Hamza OUADFEL</h5>
+              <p>
+                Professeur à l&apos;Ecole National Des Sciences Appliquées ,
+                Oujda
+              </p>
+            </div>
+          </div>
+          <div className={styles.profile}>
+            <div
+              className={styles.pdp}
+              style={{ backgroundImage: "url(mourad.jpeg)" }}
+            ></div>
+            <div className={styles.name}>
+              <h5>Morad Mziout</h5>
+              <p>
+                Lauréat Ensao GI 2007 , Directeur Conseil Expert - CGI Montréal
+              </p>
+            </div>
+          </div>
+          <div className={styles.profile}>
+            <div
+              className={styles.pdp}
+              style={{ backgroundImage: "url(hamoouti.jpeg)" }}
+            ></div>
+            <div className={styles.name}>
+              <h5>Dr. Belkheir Hammouti</h5>
+              <p>Chercheur et Docteur en Science des Corrosions</p>
+            </div>
+          </div>
+          <div className={styles.profile}>
+            <div
+              className={styles.pdp}
+              style={{ backgroundImage: "url(bentata.jpeg)" }}
+            ></div>
+            <div className={styles.name}>
+              <h5>Pr. Yassamine Bentata </h5>
+              <p>
+                Professeur de l&apos;enseignement supérieur à la Faculté de
+                médecine et de pharmacie d&apos;Oujda
+              </p>
             </div>
           </div>
         </div>
