@@ -18,7 +18,12 @@ export default function Archives() {
       <Layout>
         <div
           className={styles.tree}
-          style={{ display: "flex", flexWrap: "wrap", marginTop: "50px" }}
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            flexWrap: "wrap",
+            marginTop: "50px",
+          }}
         >
           <div className={styles.profile}>
             <div
@@ -126,6 +131,29 @@ export default function Archives() {
             <div className={styles.name}>
               <h5>Dr. Belkheir Hammouti</h5>
               <p>Chercheur et Docteur en Science des Corrosions</p>
+            </div>
+          </div>
+          <div className={styles.profile}>
+            <div
+              className={styles.pdp}
+              style={{ backgroundImage: "url(anis.jpeg)" }}
+            ></div>
+            <div className={styles.name}>
+              <h5>Anis CHOUAIK </h5>
+              <p>Expert comptable A&G conseil</p>
+            </div>
+          </div>
+          <div className={styles.profile}>
+            <div
+              className={styles.pdp}
+              style={{ backgroundImage: "url(hamid.jpg)" }}
+            ></div>
+            <div className={styles.name}>
+              <h5>Dr Hamid MAHYOU</h5>
+              <p>
+                Chef du Centre Régional de la Recherche Agronomique Oujda. INRA
+                Maroc
+              </p>
             </div>
           </div>
           <div className={styles.profile}>

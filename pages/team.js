@@ -164,7 +164,7 @@ export default function Archives() {
             <div className={styles.profile}>
               <div
                 className={styles.pdp}
-                style={{ backgroundImage: "url(/ayoub.jpeg)" }}
+                style={{ backgroundImage: "url(/amina.jpeg)" }}
               ></div>
               <div className={styles.name}>
                 <h5>Amina Elkadi</h5>
