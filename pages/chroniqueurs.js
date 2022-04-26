@@ -22,7 +22,7 @@ export default function Archives() {
             display: "flex",
             justifyContent: "center",
             flexWrap: "wrap",
-            marginTop: "50px",
+            marginTop: "100px",
           }}
         >
           <div className={styles.profile}>
@@ -63,7 +63,7 @@ export default function Archives() {
             ></div>
             <div className={styles.name}>
               <h5>Pr. Maryam Fourtassi</h5>
-              <p>faculte de medecine et de pharmacie oujda</p>
+              <p>Faculte de Médecine et de Pharmacie de Tanger </p>
             </div>
           </div>
           <div className={styles.profile}>
@@ -98,7 +98,7 @@ export default function Archives() {
               </p>
             </div>
           </div>
-          <div className={styles.profile}>
+          {/* <div className={styles.profile}>
             <div
               className={styles.pdp}
               style={{ backgroundImage: "url(octopus.png)" }}
@@ -110,7 +110,7 @@ export default function Archives() {
                 Oujda
               </p>
             </div>
-          </div>
+          </div> */}
           <div className={styles.profile}>
             <div
               className={styles.pdp}
