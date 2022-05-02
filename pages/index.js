@@ -44,9 +44,18 @@ export default function Home() {
         <Layout>
           {/* <Slider articles={sliderArticles}></Slider> */}
 
-          <div className={styles.fixed}>
+          {/* <div className={styles.fixed}>
+            <p>N°9 DU 1 AU 30 AVRIL 2022</p>
+          </div> */}
+          {/* <div className={styles.fixed1}>
             <p>N°9 DU 1 AU 30 AVRIL 2022</p>
           </div>
+          <div className={styles.fixed2}>
+            <p></p>
+          </div>
+          <div className={styles.fixed3}>
+            <p>N°9 DU 1 AU 30 AVRIL 2022</p>
+          </div> */}
           <div className={styles.edition}>
             <p>
               <span>&laquo;</span> le magazine de l&apos;ingénieur par

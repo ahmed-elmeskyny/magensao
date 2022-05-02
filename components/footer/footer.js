@@ -62,7 +62,7 @@ const Footer = ({ toggle, setToggle }) => {
 
       <div className={styles.logo}>
         <img src="/logo1.png" width="50px"></img>
-        <p>MagEnsao</p>
+        <p>MAGENSAO</p>
       </div>
       <p className={styles.creator}>
         by <a href="https://ahmedelmeskyny.vercel.app/">Ahmed El Meskyny</a>
