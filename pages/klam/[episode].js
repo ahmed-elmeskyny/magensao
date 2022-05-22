@@ -110,7 +110,6 @@ export default function Episode() {
                 )}
               </div>
             </div>
-            <Share></Share>
           </div>
         </Layout>
       )}
