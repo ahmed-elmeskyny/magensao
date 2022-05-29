@@ -13,9 +13,11 @@ const Article = ({ title, author, article, createdAt, img, domaine }) => {
       <h1 className={styles.title}> {title}</h1>
       <p className={styles.writer}>
         {/*  Publié le {getFormattedDate(createdAt)} , */}
-        {author} , {domaine}
+        {author}
+        {domaine ? <span>,</span> : null}
+        {domaine}
       </p>
-      <img src={img}></img>
+      {domaine ? <img src={img}></img> : null}
       <div className={styles.article}>{parse(`${article}`)}</div>
     </div>
   );

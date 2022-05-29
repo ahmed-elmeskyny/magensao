@@ -28,6 +28,11 @@ export default function Archives() {
                 <p>Avril 2022</p>
               </Link>
             </div>
+            <div className={styles.edition}>
+              <Link href="/edition/juin2022">
+                <p>Juin 2022</p>
+              </Link>
+            </div>
           </div>
           <h2>anciennes editons</h2>
           <div className={styles.magContainer}>
