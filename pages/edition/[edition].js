@@ -26,7 +26,7 @@ export default function Edition() {
     onSnapshot(collection(fire, `${edition}`), (snapshot) => {
       setarticles(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
     });
-  }, []);
+  }, [edition]);
 
   const autre = articles.filter((article) => article.position == "autre");
   const rubrique = articles.filter((article) => article.position == "rubrique");
@@ -63,34 +63,64 @@ export default function Edition() {
               <h3>Editorial</h3>
               <div className={styles.articles}>
                 {edito.map((article) => (
-                  <Thumbnail key={article.id} {...article} margin></Thumbnail>
+                  <Thumbnail
+                    key={article.id}
+                    {...article}
+                    edition={article.edition}
+                    margin
+                  ></Thumbnail>
                 ))}
               </div>
               <h3>spécial</h3>
               <div className={styles.articles}>
                 {rubrique.map((article) => (
-                  <Thumbnail key={article.id} {...article} margin></Thumbnail>
+                  <Thumbnail
+                    key={article.id}
+                    {...article}
+                    edition={article.edition}
+                    margin
+                  ></Thumbnail>
                 ))}
               </div>
               <h3>A la UNe</h3>
               <div className={styles.articles}>
                 {alaune.map((article) => (
-                  <Thumbnail key={article.id} {...article} margin></Thumbnail>
+                  <Thumbnail
+                    key={article.id}
+                    {...article}
+                    edition={edition}
+                    margin
+                  ></Thumbnail>
                 ))}
               </div>
               <h3>ARTICLES DU MOIS</h3>
               <div className={styles.articles}>
                 {autre.map((article) => (
-                  <Thumbnail key={article.id} {...article} margin></Thumbnail>
+                  <Thumbnail
+                    key={article.id}
+                    {...article}
+                    edition={edition}
+                    margin
+                  ></Thumbnail>
                 ))}
               </div>
               <h3>Professeur et alumini</h3>
               <div className={styles.articles}>
                 {prof.map((article) => (
-                  <Thumbnail key={article.id} {...article} margin></Thumbnail>
+                  <Thumbnail
+                    key={article.id}
+                    {...article}
+                    edition={edition}
+                    margin
+                  ></Thumbnail>
                 ))}
                 {alumini.map((article) => (
-                  <Thumbnail key={article.id} {...article} margin></Thumbnail>
+                  <Thumbnail
+                    key={article.id}
+                    {...article}
+                    edition={edition}
+                    margin
+                  ></Thumbnail>
                 ))}
               </div>
             </div>

@@ -15,10 +15,12 @@ $lower-contrast: #f5f6fb;
   padding: 5px;
   cursor: pointer;
 
-  img {
+  .img {
     width: 300px;
-    border-radius: 5px;
-    height: 160px;
+    border-radius: 10px;
+    height: 250px;
+    background-size: cover;
+    // background-position: center;
   }
   h2 {
     font-size: 18px;

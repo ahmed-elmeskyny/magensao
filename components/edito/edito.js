@@ -24,7 +24,10 @@ const Edito = ({ article }) => {
           {/* <h1>{article.title}</h1> */}
           <p>{article.slug} ....</p>
           <div className={styles.Links}>
-            <a className={styles.link2} href={`/article/${article.id}`}>
+            <a
+              className={styles.link2}
+              href={`/article/${article.id}?edition=${article.edition}`}
+            >
               LIRE EDITORIAL{" "}
             </a>
             {/* <a className={styles.link2} href="/archives">

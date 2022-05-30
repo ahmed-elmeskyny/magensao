@@ -35,7 +35,7 @@ export default function LowerMenu() {
         {rubrique1.map((rub) => (
           <li key={rub.id}>
             <ActiveLink
-              href={`/article/${rub.id}`}
+              href={`/article/${rub.id}?edition=${rub.edition}`}
               activeClassName={styles.activeLink}
             >
               <a>{rub.categorie}</a>

@@ -21,7 +21,10 @@ const Categorie = ({ prof, alumini }) => {
         <h2>{prof.title}</h2>
         <p>{prof.slug}...</p>
         <div className={styles.Links}>
-          <a className={styles.link2} href={`/article/${prof.id}`}>
+          <a
+            className={styles.link2}
+            href={`/article/${prof.id}?edition=${prof.edition}`}
+          >
             LIRE LE QUESTIONNAIRE{" "}
           </a>
         </div>
@@ -36,7 +39,10 @@ const Categorie = ({ prof, alumini }) => {
         <h2>{alumini.title}</h2>
         <p>{alumini.slug}...</p>
         <div className={styles.Links}>
-          <a className={styles.link2} href={`/article/${alumini.id}`}>
+          <a
+            className={styles.link2}
+            href={`/article/${alumini.id}?edition=${alumini.edition}`}
+          >
             LIRE LE QUESTIONNAIRE{" "}
           </a>
         </div>

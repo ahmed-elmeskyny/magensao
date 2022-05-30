@@ -3,11 +3,20 @@ import styles from "./thumbnail.module.scss";
 
 //utils
 import { getFormattedDate } from "../../config/fire-config";
+import { urlObjectKeys } from "next/dist/shared/lib/utils";
 
-const Thumbnail = ({ img, categorie, createdAt, title, id, author }) => {
+const Thumbnail = ({ img, edition, title, id, author }) => {
   return (
-    <a className={styles.container} href={`/article/${id}`}>
-      <img src={img ? img : "/blog.png"}></img>
+    <a className={styles.container} href={`/article/${id}?edition=${edition}`}>
+      <div
+        className={styles.img}
+        style={
+          img
+            ? { backgroundImage: `url(${img})` }
+            : { backgroundImage: "url(/blog.png) " }
+        }
+      ></div>
+      {/* <img src={img ? img : "/blog.png"}></img> */}
       <div>
         <p className={styles.date}>
           {/* {getFormattedDate(createdAt)} - <span>{categorie}</span> */}

@@ -88,7 +88,7 @@ Son but est d'instruire l'élève ingénieur en l'approchant le plus possible du
                   <div className={styles.Links}>
                     <a
                       className={styles.link1}
-                      href={`/article/${alaune[0].id}`}
+                      href={`/article/${alaune[0].id}?edition=${alaune[0].edition}`}
                     >
                       LIRE L&apos;ARTICLE{" "}
                     </a>
@@ -111,6 +111,7 @@ Son but est d'instruire l'élève ingénieur en l'approchant le plus possible du
                       <Thumbnail
                         key={article.id}
                         {...article}
+                        edition={article.edition}
                         margin
                       ></Thumbnail>
                     )
@@ -119,7 +120,7 @@ Son but est d'instruire l'élève ingénieur en l'approchant le plus possible du
             </div>
           </div>
 
-          <Categorie prof={prof[0]} alumini={alumini[0]}></Categorie>
+          {/* <Categorie prof={prof[0]} alumini={alumini[0]}></Categorie> */}
           <Abonner></Abonner>
         </Layout>
       )}
