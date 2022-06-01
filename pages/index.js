@@ -18,7 +18,7 @@ import { collection, onSnapshot } from "firebase/firestore";
 export default function Home() {
   const [articles, setarticles] = useState([]);
   useEffect(() => {
-    onSnapshot(collection(fire, "avril2022"), (snapshot) => {
+    onSnapshot(collection(fire, "juin2022"), (snapshot) => {
       setarticles(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
     });
   }, []);
@@ -120,7 +120,7 @@ Son but est d'instruire l'élève ingénieur en l'approchant le plus possible du
             </div>
           </div>
 
-          {/* <Categorie prof={prof[0]} alumini={alumini[0]}></Categorie> */}
+          <Categorie prof={prof[0]} alumini={alumini[0]}></Categorie>
           <Abonner></Abonner>
         </Layout>
       )}
