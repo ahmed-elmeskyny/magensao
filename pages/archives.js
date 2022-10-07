@@ -24,13 +24,18 @@ export default function Archives() {
           <h2> nouvelles editions</h2>
           <div className={styles.editions}>
             <div className={styles.edition}>
-              <Link href="/edition/avril2022">
-                <p>Avril 2022</p>
+              <Link href="/edition/octobre2022">
+                <p>Octobre 2022</p>
               </Link>
             </div>
             <div className={styles.edition}>
               <Link href="/edition/juin2022">
                 <p>Juin 2022</p>
+              </Link>
+            </div>
+            <div className={styles.edition}>
+              <Link href="/edition/avril2022">
+                <p>Avril 2022</p>
               </Link>
             </div>
           </div>

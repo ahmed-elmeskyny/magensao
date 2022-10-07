@@ -18,7 +18,7 @@ import { collection, onSnapshot } from "firebase/firestore";
 export default function Home() {
   const [articles, setarticles] = useState([]);
   useEffect(() => {
-    onSnapshot(collection(fire, "juin2022"), (snapshot) => {
+    onSnapshot(collection(fire, "octobre2022"), (snapshot) => {
       setarticles(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
     });
   }, []);
