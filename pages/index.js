@@ -78,8 +78,8 @@ Son but est d'instruire l'élève ingénieur en l'approchant le plus possible du
             <div className={styles.filter}>
               <img src="/megaphone.png" width="100px"></img>
               <div className={styles.text}>
-                <h2>"We are recruting" </h2>
-                <a href="https://forms.gle/dGwR4RZT2FrxxAGcA">
+                <h2>&quot;We are recruting&quot; </h2>
+                <a href="https://forms.gle/tjBp5wCFaxzJhaPY9">
                   Click Here to apply
                 </a>
               </div>

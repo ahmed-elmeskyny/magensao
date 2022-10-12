@@ -103,9 +103,6 @@ $lower-contrast: #f5f6fb;
   border: #0f94b8 1px solid;
   border-radius: 5px;
   margin-bottom: 10px;
-
-  // background-image: url("/public/hiringback.png");
-  // opacity: 0.5;
   background-size: cover;
 
   .filter {
@@ -114,6 +111,7 @@ $lower-contrast: #f5f6fb;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    flex-wrap: wrap;
     background-color: rgba($color: #f5f6fb, $alpha: 0.4);
     padding: 5px 20px;
 
@@ -127,6 +125,7 @@ $lower-contrast: #f5f6fb;
         font-family: "Permanent Marker", cursive;
         font-size: 50px;
         opacity: 1;
+        text-align: center;
       }
       a {
         color: #30495d;
