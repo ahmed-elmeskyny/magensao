@@ -71,6 +71,20 @@ Son but est d'instruire l'élève ingénieur en l'approchant le plus possible du
               excellence <span>&raquo;</span>
             </p>
           </div>
+          <div
+            className={styles.hiring}
+            style={{ backgroundImage: "URL(/hiringback.png)" }}
+          >
+            <div className={styles.filter}>
+              <img src="/megaphone.png" width="100px"></img>
+              <div className={styles.text}>
+                <h2>"We are recruting" </h2>
+                <a href="https://forms.gle/dGwR4RZT2FrxxAGcA">
+                  Click Here to apply
+                </a>
+              </div>
+            </div>
+          </div>
           <Edito article={edito[0]}></Edito>
           <div className={styles.topArticles}>
             <div className={styles.articles}>

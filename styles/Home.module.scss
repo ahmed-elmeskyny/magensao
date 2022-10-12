@@ -4,6 +4,7 @@ $main-text-color: #30495d;
 $second-text-color: #79809a;
 $lower-contrast: #f5f6fb;
 
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
 .fixed {
   position: fixed;
   left: -120px;
@@ -95,6 +96,43 @@ $lower-contrast: #f5f6fb;
   }
   @media (min-width: 800px) {
     display: none;
+  }
+}
+
+.hiring {
+  border: #0f94b8 1px solid;
+  border-radius: 5px;
+  margin-bottom: 10px;
+
+  // background-image: url("/public/hiringback.png");
+  // opacity: 0.5;
+  background-size: cover;
+
+  .filter {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba($color: #f5f6fb, $alpha: 0.4);
+    padding: 5px 20px;
+
+    .text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      opacity: 1;
+      h2 {
+        font-family: "Permanent Marker", cursive;
+        font-size: 50px;
+        opacity: 1;
+      }
+      a {
+        color: #30495d;
+        text-decoration: underline;
+      }
+    }
   }
 }
 .topArticles {
