@@ -28,6 +28,7 @@ export default function UpperMenu({ toggle, setToggle }) {
             <a
               href="https://www.facebook.com/profile.php?id=100079938348671"
               target="_blank"
+              rel="noreferrer"
             >
               <RiFacebookBoxFill></RiFacebookBoxFill>
             </a>
@@ -36,6 +37,7 @@ export default function UpperMenu({ toggle, setToggle }) {
             <a
               href="https://www.instagram.com/mag__ensao/?igshid=YmMyMTA2M2Y%3D"
               target="_blank"
+              rel="noreferrer"
             >
               <AiFillInstagram></AiFillInstagram>
             </a>
@@ -44,12 +46,17 @@ export default function UpperMenu({ toggle, setToggle }) {
             <a
               href="https://www.linkedin.com/company/magensao/"
               target="_blank"
+              rel="noreferrer"
             >
               <FaLinkedin></FaLinkedin>
             </a>
           </li>
           <li className={styles.icon}>
-            <a href="mailto:magensao@gmail.com" target="_blank">
+            <a
+              href="mailto:magensao@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+            >
               <MdEmail></MdEmail>
             </a>
           </li>
