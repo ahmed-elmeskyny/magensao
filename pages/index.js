@@ -71,7 +71,7 @@ Son but est d'instruire l'élève ingénieur en l'approchant le plus possible du
               excellence <span>&raquo;</span>
             </p>
           </div>
-          <div
+          {/* <div
             className={styles.hiring}
             style={{ backgroundImage: "URL(/hiringback.png)" }}
           >
@@ -84,7 +84,7 @@ Son but est d'instruire l'élève ingénieur en l'approchant le plus possible du
                 </a>
               </div>
             </div>
-          </div>
+          </div> */}
           <Edito article={edito[0]}></Edito>
           <div className={styles.topArticles}>
             <div className={styles.articles}>
