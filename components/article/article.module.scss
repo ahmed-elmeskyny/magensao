@@ -93,6 +93,14 @@ $lower-contrast: #f5f6fb;
     img {
       width: 100%;
     }
+
+    p {
+      img {
+        width: 30%;
+        // height: 60%;
+        margin: 10px;
+      }
+    }
   }
 }
 
