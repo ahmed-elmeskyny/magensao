@@ -13,7 +13,9 @@ const Edito = ({ article }) => {
       <div className={styles.editoContainer}>
         <div
           className={styles.imgContainer}
-          style={{ backgroundImage: `url(${article.img})` }}
+          style={{
+            backgroundImage: `url(${article.img})`,
+          }}
         >
           {/* <img src={article.img}></img> */}
         </div>

@@ -34,7 +34,10 @@ const Categorie = ({ prof, alumini }) => {
         {/* <img src={alumini.img}></img> */}
         <div
           className={styles.img}
-          style={{ backgroundImage: `url(${alumini.img})` }}
+          style={{
+            backgroundImage: `url(${alumini.img})`,
+            backgroundPosition: "center",
+          }}
         ></div>
         <h2>{alumini.title}</h2>
         <p>{alumini.slug}...</p>
