@@ -25,11 +25,14 @@ export default function Blog() {
   const router = useRouter();
   const { article, edition } = router.query;
 
-  useEffect(async () => {
-    const docRef = doc(fire, `${edition}`, `${article}`);
-    const docSnap = await getDoc(docRef);
-    setArticle(docSnap.data());
-    setLoader(false);
+  useEffect(() => {
+    async function fetchData() {
+      const docRef = doc(fire, `${edition}`, `${article}`);
+      const docSnap = await getDoc(docRef);
+      setArticle(docSnap.data());
+      setLoader(false);
+    }
+    fetchData();
   }, [article]);
 
   return (

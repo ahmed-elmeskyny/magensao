@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 //styles
 import "react-slideshow-image/dist/styles.css";
 import styles from "./edito.module.scss";
+import Link from "next/link";
 
 const Edito = ({ article }) => {
   return (
@@ -26,12 +27,12 @@ const Edito = ({ article }) => {
           {/* <h1>{article.title}</h1> */}
           <p>{article.slug} ....</p>
           <div className={styles.Links}>
-            <a
+            <Link
               className={styles.link2}
               href={`/article/${article.id}?edition=${article.edition}`}
             >
               LIRE EDITORIAL{" "}
-            </a>
+            </Link>
             {/* <a className={styles.link2} href="/archives">
               VOIR TOUS LES NUMÉROS
             </a> */}

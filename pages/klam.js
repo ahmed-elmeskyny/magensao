@@ -18,6 +18,7 @@ import { klam } from "../db/dbklam";
 
 import Layout from "../components/Layout/layout";
 import Loader from "../components/loader/loader";
+import Link from "next/link";
 
 const Klam = () => {
   const router = useRouter();
@@ -68,7 +69,7 @@ const Klam = () => {
               <div className={styles.episodes}>
                 {klam.map((episode) => {
                   return (
-                    <a
+                    <Link
                       className={styles.episode}
                       key={episode.id}
                       href={`klam/${episode.id}`}
@@ -79,7 +80,7 @@ const Klam = () => {
                       ></div>
                       <p> {episode.episode} </p>
                       <p> {episode.guest}</p>
-                    </a>
+                    </Link>
                   );
                 })}
               </div>

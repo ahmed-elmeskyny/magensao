@@ -8,6 +8,7 @@ import { RiFacebookBoxFill, RiInstagramFill } from "react-icons/ri";
 import { MdEmail } from "react-icons/md";
 import { FaLinkedin } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
+import Link from "next/link";
 
 export default function UpperMenu({ toggle, setToggle }) {
   return (
@@ -25,40 +26,40 @@ export default function UpperMenu({ toggle, setToggle }) {
       <div className={styles.links}>
         <ul>
           <li className={styles.icon}>
-            <a
+            <Link
               href="https://www.facebook.com/profile.php?id=100079938348671"
               target="_blank"
               rel="noreferrer"
             >
               <RiFacebookBoxFill></RiFacebookBoxFill>
-            </a>
+            </Link>
           </li>
           <li className={styles.icon}>
-            <a
+            <Link
               href="https://www.instagram.com/mag__ensao/?igshid=YmMyMTA2M2Y%3D"
               target="_blank"
               rel="noreferrer"
             >
               <AiFillInstagram></AiFillInstagram>
-            </a>
+            </Link>
           </li>
           <li className={styles.icon}>
-            <a
+            <Link
               href="https://www.linkedin.com/company/magensao/"
               target="_blank"
               rel="noreferrer"
             >
               <FaLinkedin></FaLinkedin>
-            </a>
+            </Link>
           </li>
           <li className={styles.icon}>
-            <a
+            <Link
               href="mailto:magensao@gmail.com"
               target="_blank"
               rel="noreferrer"
             >
               <MdEmail></MdEmail>
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

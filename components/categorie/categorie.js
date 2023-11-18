@@ -7,6 +7,7 @@ import styles from "./categorie.module.scss";
 //icons
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
 import Thumbnail from "../thumbnail/thumbnail";
+import Link from "next/link";
 
 const Categorie = ({ prof, alumini }) => {
   return (
@@ -21,12 +22,12 @@ const Categorie = ({ prof, alumini }) => {
         <h2>{prof.title}</h2>
         <p>{prof.slug}...</p>
         <div className={styles.Links}>
-          <a
+          <Link
             className={styles.link2}
             href={`/article/${prof.id}?edition=${prof.edition}`}
           >
             LIRE LE QUESTIONNAIRE{" "}
-          </a>
+          </Link>
         </div>
       </div>{" "}
       <div className={styles.categorie}>
@@ -42,12 +43,12 @@ const Categorie = ({ prof, alumini }) => {
         <h2>{alumini.title}</h2>
         <p>{alumini.slug}...</p>
         <div className={styles.Links}>
-          <a
+          <Link
             className={styles.link2}
             href={`/article/${alumini.id}?edition=${alumini.edition}`}
           >
             LIRE LE QUESTIONNAIRE{" "}
-          </a>
+          </Link>
         </div>
       </div>
     </div>

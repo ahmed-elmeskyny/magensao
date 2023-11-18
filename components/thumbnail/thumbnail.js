@@ -4,10 +4,11 @@ import styles from "./thumbnail.module.scss";
 //utils
 import { getFormattedDate } from "../../config/fire-config";
 import { urlObjectKeys } from "next/dist/shared/lib/utils";
+import Link from "next/link";
 
 const Thumbnail = ({ img, edition, title, id, author }) => {
   return (
-    <a className={styles.container} href={`/article/${id}?edition=${edition}`}>
+    <Link className={styles.container} href={`/article/${id}?edition=${edition}`}>
       <div
         className={styles.img}
         style={
@@ -24,7 +25,7 @@ const Thumbnail = ({ img, edition, title, id, author }) => {
         </p>
         <h2 className={styles.titre}>{title}</h2>
       </div>
-    </a>
+    </Link>
   );
 };
 

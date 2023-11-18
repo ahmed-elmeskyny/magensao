@@ -10,7 +10,7 @@ import Thumbnail from "../components/thumbnail/thumbnail";
 import Abonner from "../components/abonner/abonner";
 import Categorie from "../components/categorie/categorie";
 import Loader from "../components/loader/loader";
-
+import Link from "next/link";
 //firebase
 import { fire } from "../config/fire-config";
 import { collection, onSnapshot } from "firebase/firestore";
@@ -103,12 +103,12 @@ Son but est d'instruire l'élève ingénieur en l'approchant le plus possible du
                   <h1>{alaune[0].title}</h1>
                   <p>{alaune[0].slug}.....</p>
                   <div className={styles.Links}>
-                    <a
+                    <Link
                       className={styles.link1}
                       href={`/article/${alaune[0].id}?edition=${alaune[0].edition}`}
                     >
                       LIRE L&apos;ARTICLE{" "}
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

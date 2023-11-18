@@ -24,25 +24,47 @@ export default function Archives() {
           <h2> nouvelles editions</h2>
           <div className={styles.editions}>
             <div className={styles.edition}>
-              <Link href="/edition/octobre2022">
-                <p>Octobre 2022</p>
+              <Link href="/edition/avril2022">
+                <p>Avril 2022</p>
               </Link>
             </div>
+
             <div className={styles.edition}>
               <Link href="/edition/juin2022">
                 <p>Juin 2022</p>
               </Link>
             </div>
             <div className={styles.edition}>
-              <Link href="/edition/avril2022">
-                <p>Avril 2022</p>
+              <Link href="/edition/octobre2022">
+                <p>Octobre 2022</p>
+              </Link>
+            </div>
+            <div className={styles.edition}>
+              <Link href="/edition/decembre2022">
+                <p>Decembre 2022</p>
+              </Link>
+            </div>
+
+            <div className={styles.edition}>
+              <Link href="/edition/janvier2023">
+                <p>Janvier 2023</p>
+              </Link>
+            </div>
+            <div className={styles.edition}>
+              <Link href="/edition/fevrier2023">
+                <p>Fevrier 2023</p>
               </Link>
             </div>
           </div>
           <h2>anciennes editons</h2>
           <div className={styles.magContainer}>
             {magdb.map((mag) => (
-              <a href={mag.read} target="_blank" rel="noreferrer" key={mag.id}>
+              <Link
+                href={mag.read}
+                target="_blank"
+                rel="noreferrer"
+                key={mag.id}
+              >
                 <div className={styles.mag}>
                   <div
                     className={styles.thumbnail}
@@ -54,7 +76,7 @@ export default function Archives() {
                     <h4>{mag.title}</h4>
                     <p>{mag.date}</p>
                   </div>
-                  <a
+                  <Link
                     href={mag.read}
                     target="_blank"
                     rel="noreferrer"
@@ -66,8 +88,8 @@ export default function Archives() {
                       style={{ marginRight: "10px" }}
                     ></img>
                     Lecture interactive
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href={mag.pdf}
                     target="_blank"
                     rel="noreferrer"
@@ -79,9 +101,9 @@ export default function Archives() {
                       style={{ marginRight: "10px" }}
                     ></img>
                     PDF téléchargeable
-                  </a>
+                  </Link>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
         </div>

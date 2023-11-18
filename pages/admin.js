@@ -105,7 +105,7 @@ export default function Home() {
           formats={formats}
           value={value}
           onChange={setValue}
-          theme="snow"
+          // theme="snow"
         />
         {loader ? (
           <Loader></Loader>

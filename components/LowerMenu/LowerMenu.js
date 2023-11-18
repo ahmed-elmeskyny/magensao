@@ -29,7 +29,7 @@ export default function LowerMenu() {
       <ul>
         <li>
           <ActiveLink href="/" activeClassName={styles.activeLink}>
-            <a>Accueil</a>
+            <Link href="/">Accueil</Link>
           </ActiveLink>
         </li>
         {rubrique1.map((rub) => (
@@ -38,7 +38,9 @@ export default function LowerMenu() {
               href={`/article/${rub.id}?edition=${rub.edition}`}
               activeClassName={styles.activeLink}
             >
-              <a>{rub.categorie}</a>
+              <Link href={`/article/${rub.id}?edition=${rub.edition}`}>
+                {rub.categorie}
+              </Link>
             </ActiveLink>
           </li>
         ))}
@@ -49,13 +51,13 @@ export default function LowerMenu() {
         </li>
         <li>
           <ActiveLink href="/chroniqueurs" activeClassName={styles.activeLink}>
-            <a>Chroniqueurs</a>
+            <Link href="/chroniqueurs">Chroniqueurs</Link>
           </ActiveLink>
         </li>
 
         <li>
           <ActiveLink href="/team" activeClassName={styles.activeLink}>
-            <a href="#">Team </a>
+            <Link href="/team">Team</Link>
           </ActiveLink>
         </li>
       </ul>

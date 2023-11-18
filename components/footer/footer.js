@@ -14,31 +14,31 @@ const Footer = ({ toggle, setToggle }) => {
         <p>Suivez-nous</p>
         <ul>
           <li className={styles.icon}>
-            <a>
+            <Link href="#">
               <RiFacebookBoxFill></RiFacebookBoxFill>
-            </a>
+            </Link>
           </li>
           <li className={styles.icon}>
-            <a>
+            <Link href="#">
               <RiInstagramFill></RiInstagramFill>
-            </a>
+            </Link>
           </li>
           <li className={styles.icon}>
-            <a>
+            <Link href="#">
               <MdEmail></MdEmail>
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
       <div className={styles.menu}>
         <ul>
           <li>
-            <a>Accueil</a>
+            <Link href="#">Accueil</Link>
           </li>
           <li>
-            <a href="#" onClick={() => setToggle(!toggle)}>
+            <Link href="#" onClick={() => setToggle(!toggle)}>
               Abonnement
-            </a>
+            </Link>
           </li>
           {/* <li>
             <a href="/apropos">A propos de MagEnsao</a>
@@ -47,9 +47,9 @@ const Footer = ({ toggle, setToggle }) => {
             <a href="#"></a>
           </li> */}
           <li>
-            <a href="https://alensao.com/" target="_blank" rel="noreferrer">
+            <Link href="https://alensao.com/" target="_blank" rel="noreferrer">
               Alensao.com
-            </a>
+            </Link>
           </li>
           <li>
             <Link href="/archives">Archives</Link>
@@ -65,7 +65,8 @@ const Footer = ({ toggle, setToggle }) => {
         <p>MAGENSAO</p>
       </div>
       <p className={styles.creator}>
-        by <a href="https://ahmedelmeskyny.vercel.app/">Ahmed El Meskyny</a>
+        by{" "}
+        <Link href="https://ahmedelmeskyny.vercel.app/">Ahmed El Meskyny</Link>
       </p>
     </div>
   );
