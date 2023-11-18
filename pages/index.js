@@ -18,7 +18,7 @@ import { collection, onSnapshot } from "firebase/firestore";
 export default function Home() {
   const [articles, setarticles] = useState([]);
   useEffect(() => {
-    onSnapshot(collection(fire, "decembre2022"), (snapshot) => {
+    onSnapshot(collection(fire, "fevrier2023"), (snapshot) => {
       setarticles(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
     });
   }, []);
@@ -95,7 +95,7 @@ Son but est d'instruire l'élève ingénieur en l'approchant le plus possible du
                   className={styles.imgContainer}
                   style={{
                     backgroundImage: `url(${alaune[0].img})`,
-                    backgroundPosition: "center",
+                    // backgroundPosition: "center",
                   }}
                 ></div>
                 <div className={styles.description}>
