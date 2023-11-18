@@ -4,6 +4,7 @@ import Head from "next/head";
 import styles from "../styles/contact.module.scss";
 
 import { HiOutlineMailOpen } from "react-icons/hi";
+import Link from "next/link";
 //components
 import Layout from "../components/Layout/layout";
 
