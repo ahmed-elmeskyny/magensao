@@ -125,11 +125,11 @@ export default function Archives() {
             <div className={styles.profile}>
               <div
                 className={styles.pdp}
-                style={{ backgroundImage: "url(/adnane.jpeg)" }}
+                style={{ backgroundImage: "url(/aya.jpeg)" }}
               ></div>
               <div className={styles.name}>
-                <h5>Adnane EL KHATIB</h5>
-                <p>Directeur de Publication</p>
+                <h5>Aya BOULBALI</h5>
+                <p>Directrice de Publication</p>
               </div>
             </div>
           </div>
@@ -174,11 +174,11 @@ export default function Archives() {
             <div className={styles.profile}>
               <div
                 className={styles.pdp}
-                style={{ backgroundImage: "url(/octopus.png)" }}
+                style={{ backgroundImage: "url(/adnane.jpeg)" }}
               ></div>
               <div className={styles.name}>
-                <h5>OCTOPUS</h5>
-                <p>pilotage</p>
+                <h5>Adnane EL KHATIB</h5>
+                <p>Pilotage</p>
               </div>
             </div>
           </div>
@@ -241,16 +241,6 @@ export default function Archives() {
               flexWrap: "wrap",
             }}
           >
-            <div className={styles.profile}>
-              <div
-                className={styles.pdp}
-                style={{ backgroundImage: "url(/aya.jpeg)" }}
-              ></div>
-              <div className={styles.name}>
-                <h5>Aya BOULBALI</h5>
-                <p>Reporter</p>
-              </div>
-            </div>
             <div className={styles.profile}>
               <div
                 className={styles.pdp}
