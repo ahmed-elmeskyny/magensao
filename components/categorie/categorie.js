@@ -29,7 +29,7 @@ const Categorie = ({ prof, alumini }) => {
             LIRE LE QUESTIONNAIRE{" "}
           </Link>
         </div>
-      </div>{" "}
+      </div>
       <div className={styles.categorie}>
         <h1>ALUMINI DE L&apos;ÉDITION</h1>
         {/* <img src={alumini.img}></img> */}
