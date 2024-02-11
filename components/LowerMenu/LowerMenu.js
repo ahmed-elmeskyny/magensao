@@ -15,7 +15,7 @@ import ActiveLink from "../ActiveLink/ActiveLink";
 export default function LowerMenu() {
   const [rubrique, setRubrique] = useState([]);
   useEffect(() => {
-    onSnapshot(collection(fire, "novembre2023"), (snapshot) => {
+    onSnapshot(collection(fire, "février2024"), (snapshot) => {
       setRubrique(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
     });
   }, []);
